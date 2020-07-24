@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Demo</title>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light">
+        <a href="#" class="navbar-branch" style="margin-right: 30px;">
+            <h3 class="mb-0 site-logo">LOGO</h3>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+        data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">List truyện</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Thể loại</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Liên hệ</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item">
+                    <form action="#" method="GET" role="search">
+                        <div class="input-group search-width">
+                            <input id="searching" type="text" name="login" placeholder="Tìm truyện"
+                               class="form-control text">
+                            <span class="input-group-btn">
+                                <button type="submit" value="Tìm kiếm" class="search-button">
+                                    <img class="image-search" src="https://cdn.truyentranh.net/frontend/images/searchicon.png" alt="searchicon">
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <button type="submit" value="Đăng nhập" class="log-button btn btn-success">Đăng nhập</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <h1 class="text-left">Truyện hot mới ra lò</h1>
+        <div id="slides" class="carousel" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#slides" data-slide-to="1" ></li>
+                <li data-target="#slides" data-slide-to="2" ></li>
+                <li data-target="#slides" data-slide-to="3" ></li>
+                <li data-target="#slides" data-slide-to="4" ></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/kimetsu_no_yaiba.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Kimetsu no Yaiba chap 400</h2>
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg">Xem ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/doraemon.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Doraemon: Nobita và Mặt trăng phiêu lưu ký</h2>
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg">Xem ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/SAO.jpeg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Sword Art Online: Alicivization World</h2>
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg">Xem ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/naruto.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>Naruto Shippuden chap 701</h2>
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg">Xem ngay</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/OP.jpg" alt="">
+                    <div class="carousel-caption">
+                        <h2>One Piece: Vua Hải Tặc chap 1000</h2>
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg">Xem ngay</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid news-bar">
+            <table class="news">
+                <tr>
+                    <th colspan="4">Tin tức</th>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="fa fa-square"></span></p>
+                    </td>
+                    <td class="update">
+                        <p>Cập nhật truyện hàng tuần - 22/07/2020</p>
+                    </td>
+                    <td class="clock-date">
+                        <p><span class="fa fa-clock-o"></span> 22,th7, 2020</p>
+                    </td>
+                    <td class="user">
+                        <p><span class="far fa-user"></span> Admin</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="fa fa-square"></span></p>
+                    </td>
+                    <td>
+                        <p>Cập nhật truyện hàng tuần - 15/07/2020</p>
+                    </td>
+                    <td class="clock-date">
+                        <p><span class="fa fa-clock-o"></span> 15,th7, 2020</p>
+                    </td>
+                    <td class="user">
+                        <p><span class="far fa-user"></span> Admin</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="fa fa-square"></span></p>
+                    </td>
+                    <td>
+                        <p>Cập nhật truyện hàng tuần - 08/07/2020</p>
+                    </td>
+                    <td class="clock-date">
+                        <p><span class="fa fa-clock-o"></span> 08,th7, 2020</p>
+                    </td>
+                    <td class="user">
+                        <p><span class="far fa-user"></span> Admin</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="fa fa-square"></span></p>
+                    </td>
+                    <td>
+                        <p>Cập nhật truyện hàng tuần - 01/07/2020</p>
+                    </td>
+                    <td class="clock-date">
+                        <p><span class="fa fa-clock-o"></span> 01,th7, 2020</p>
+                    </td>
+                    <td class="user">
+                        <p><span class="far fa-user"></span> Admin</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p><span class="fa fa-square"></span></p>
+                    </td>
+                    <td>
+                        <p>Cập nhật truyện hàng tuần - 27/06/2020</p>
+                    </td>
+                    <td class="clock-date">
+                        <p><span class="fa fa-clock-o"></span> 27,th6, 2020</p>
+                    </td>
+                    <td class="user">
+                        <p><span class="far fa-user"></span> Admin</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <div class="container-fluid sidebar">
+        <h4>Xem nhiều nhất</h4>
+        <ul class="list-unstyled">
+            <li>
+                <img src="img/doraemon.jpg" alt="">
+                <div class="side-info">
+                    <a href="#" class="top-title">Doraemon</a>
+                    <p class="views"><span class="fa fa-eye"></span> 24032000</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/kimetsu_no_yaiba.jpg" alt="">
+                <div class="side-info">
+                    <a href="#" class="top-title">Kimetsu no Yaiba</a>
+                    <p class="views"><span class="fa fa-eye"></span> 12345678</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/naruto.jpg" alt="">
+                <div class="side-info">
+                    <a href="#" class="top-title">Naruto Shippuden</a>
+                    <p class="views"><span class="fa fa-eye"></span> 87654321</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/SAO.jpeg" alt="">
+                <div class="side-info">
+                    <a href="#" class="top-title">Sword Art Online: Alicivization World</a>
+                    <p class="views"><span class="fa fa-eye"></span> 12347894</p>
+                </div>
+            </li>
+            <li>
+                <img src="img/OP.jpg" alt="">
+                <div class="side-info">
+                    <a href="#" class="top-title">One Piece</a>
+                    <p class="views"><span class="fa fa-eye"></span> 92347542</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
