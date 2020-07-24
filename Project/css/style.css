@@ -151,7 +151,10 @@ table.news, th {
 
 table.news td {
     /* border: 1px solid gray; */
-    padding: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 0;
 }
 
 table.news td.clock-date, table.news td.user {
@@ -170,4 +173,31 @@ table.news td.update {
 table.news th {
     padding: 15px;
     background-color: rgb(82, 14, 26);
+}
+
+table.news td.update {
+    color: rgb(146, 17, 81);
+    font-weight: bold;
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+.content {
+    border: 1px solid gray;
+}
+
+.manga-header {
+    font-size: larger;
+    background-color: rgb(82, 14, 26);
+    padding: 15px;
+}
+
+.media-body {
+    margin-left: 10px;
+}
+
+.chart-title, .trending {
+    color: rgb(146, 17, 81);
 }
