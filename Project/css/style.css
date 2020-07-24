@@ -100,16 +100,17 @@ main {
     /* border: 1px solid gray; */
     display: flex;
     flex-direction: column;
-    height: auto;
     background-color: black;
 }
 
-.top-views {
+.top-views, .category {
     border: 1px solid gray;
+    margin-bottom: 50px;
 }
 
 .sidebar h4 {
     padding: 5px;
+    padding-left: 15px;
     background-color: rgb(61, 25, 43);
     width: 100%;
 }
@@ -223,5 +224,34 @@ table {
 }
 
 .row {
-    padding: 30px;
+    padding: 10px;
+}
+
+.category-row {
+    padding: 0;
+    padding-left: 15px;
+    padding-top: 5px;
+}
+
+a.category-link {
+    text-decoration: none;
+}
+
+a.category-item:hover {
+    text-decoration: none;
+}
+
+p.category-item {
+    color: white;
+    text-decoration: none;
+}
+
+.category h4 {
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.amount {
+    font-size: smaller;
+    color: gray;
 }
