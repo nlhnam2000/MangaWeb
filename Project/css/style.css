@@ -33,10 +33,10 @@ main {
     background-color: black;
 }
 
-main h1 {
+/* main h1 {
     padding-bottom: 0;
     border-bottom: 1px solid greenyellow;
-}
+} */
 
 .navbar {
     width: 100%;
@@ -60,6 +60,14 @@ main h1 {
     margin-right: 30px;
 }
 
+.new-manga-slide h2 {
+    background-color: rgb(82, 14, 26); 
+    border: 1px solid gray;
+    margin-top: auto;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
 .carousel {
     margin-bottom: 60px;
 }
@@ -71,7 +79,9 @@ main h1 {
 .carousel-inner h2 {
     text-shadow: 2px 2px 5px black;
     background-color: blueviolet;
-    padding: 5px;
+    padding: 5px; 
+    padding-left: -100px;
+    margin-bottom: 10px;
 }
 
 .carousel-inner button:hover {
@@ -119,7 +129,7 @@ main h1 {
 }
 
 .sidebar ul li:nth-child(even) {
-    background-color: rgb(59, 58, 58);
+    background-color: rgb(17, 17, 17);
 }
 
 a.top-title {
