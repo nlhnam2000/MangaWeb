@@ -85,13 +85,17 @@ main h1 {
 
 .sidebar {
     grid-area: sidebar;
-    padding: 0;
+    padding: 15px;
     margin: 0;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     display: flex;
     flex-direction: column;
     height: auto;
     background-color: black;
+}
+
+.top-views {
+    border: 1px solid gray;
 }
 
 .sidebar h4 {
@@ -198,6 +202,15 @@ table {
     margin-left: 10px;
 }
 
+.media-heading a:hover {
+    color: white;
+    text-decoration: none;
+}
+
 .chart-title, .trending {
     color: rgb(146, 17, 81);
+}
+
+.row {
+    padding: 30px;
 }
