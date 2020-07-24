@@ -124,7 +124,8 @@ main h1 {
 
 a.top-title {
     /* float: right; */
-    color: white;
+    color: rgb(146, 17, 81);
+    font-weight: bold;
     text-align: left;
     margin: 5px;
     text-decoration: none;
@@ -133,7 +134,7 @@ a.top-title {
 a.top-title:hover {
     /* float: right; */
     text-decoration: none;
-    color: red;
+    color: white;
 }
 
 .side-info {
