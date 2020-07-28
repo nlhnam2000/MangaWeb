@@ -16,16 +16,33 @@ body {
 
 body {
     display: grid;
-    grid-template-rows: auto, auto, 5em;
-    grid-template-columns: minmax(25em, 1fr) 25em;
+    grid-template-rows: auto, auto, auto, 5em;
+    grid-template-columns: auto 30em;
     grid-template-areas: 
+    "cover cover"
     "header header"
     "main sidebar"
     "footer footer";
 }
 
+.header-top {
+    grid-area: cover;
+}
+
+.header-top img {
+    width: 1440px;
+    height: 250px;
+    object-fit: cover;
+}
+
 nav {
     grid-area: header;
+}
+
+nav .logo {
+    width: 100px;
+    height: 50px;
+    object-fit: cover;
 }
 
 main {
@@ -90,7 +107,7 @@ main {
 }
 
 .carousel-caption {
-    top: 70%;
+    top: 60%;
 }
 
 .sidebar {
@@ -180,6 +197,10 @@ table.news td.clock-date, table.news td.user {
 table.news td.update {
     margin-left: auto;
     margin-right: auto;
+}
+
+table.news td.user {
+    padding-right: 15px;
 }
 
 .fa.fa-square {
