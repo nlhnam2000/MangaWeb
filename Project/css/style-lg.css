@@ -135,6 +135,20 @@ main {
     border: none;
 }
 
+.carousel-control-prev-icon {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.carousel-control-next-icon {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgb(20, 41, 54);
+}
+
 .carousel-caption {
     top: 60%;
 }
@@ -185,9 +199,9 @@ main {
     border: 1px solid rgba(71, 71, 71, 0.2);
 }
 
-.sidebar ul li:nth-child(even) {
-    /* background-color: rgb(180, 173, 173); */
-}
+/* .sidebar ul li:nth-child(even) {
+    background-color: rgb(180, 173, 173);
+} */
 
 a.top-title {
     /* float: right; */
