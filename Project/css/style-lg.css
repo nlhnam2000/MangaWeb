@@ -178,15 +178,8 @@ main {
     right: 0;
 }
 
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgb(20, 41, 54);
-}
-
-.carousel-caption {
-    top: 90%;
-    text-transform: uppercase;
-    font-size: larger;
-    font-weight: bold;
+.controls-top a {
+    padding: 5px;
 }
 
 .sidebar {
