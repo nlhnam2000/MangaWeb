@@ -197,6 +197,11 @@ main {
     margin-bottom: 50px;
 }
 
+.top-views ul {
+    height: 500px;
+    overflow-y: scroll;
+}
+
 .sidebar h4 {
     padding: 15px;
     /* padding-left: 15px; */
@@ -330,7 +335,7 @@ table {
     text-decoration: none;
 }
 
-.chart-title, .trending {
+.chart-title, .vietsub {
     color: black;
     text-transform: capitalize;
 }
