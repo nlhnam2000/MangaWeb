@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
     color: black; 
     /* background-color: rgb(59, 58, 58); */
     /* background-color: white !important; */
@@ -17,11 +17,12 @@ body {
 
 body {
     display: grid;
-    grid-template-rows: auto, auto, auto, 5em;
+    grid-template-rows: auto, auto, auto, auto, 5em;
     grid-template-columns: auto 30em;
     grid-template-areas: 
     "header header"
     "cover cover"
+    "slide slide"
     "main sidebar"
     "footer footer";
 }
@@ -94,6 +95,10 @@ main {
     align-items: center;
 }
 
+.new-manga-slide {
+    grid-area: slide;
+}
+
 .new-manga-slide h2 {
     /* background-color: rgb(82, 14, 26);  */
     /* border: 1px solid gray; */
@@ -118,8 +123,21 @@ main {
     padding: 20px;
 }
 
+.carousel-indicators {
+    bottom: -21px;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
 .carousel-inner img {
     width: 100%;
+    border-radius: 25px;
+    opacity: 50%;
+    z-index: -1;
 }
 
 .carousel-inner h2 {
@@ -135,14 +153,29 @@ main {
     border: none;
 }
 
-.carousel-control-prev-icon {
-    margin-left: 0;
-    margin-right: auto;
+.carousel-item a:hover {
+    text-decoration: none;
+    color: white;
 }
 
-.carousel-control-next-icon {
-    margin-left: auto;
-    margin-right: 0;
+.manga-slide-item-box {
+    display: inline-block;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.manga-slide-item-text {
+    text-transform: uppercase;
+    z-index: 100;
+    text-align: center;
+    top: 50%;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .carousel-control-prev-icon, .carousel-control-next-icon {
@@ -150,7 +183,10 @@ main {
 }
 
 .carousel-caption {
-    top: 60%;
+    top: 90%;
+    text-transform: uppercase;
+    font-size: larger;
+    font-weight: bold;
 }
 
 .sidebar {
@@ -231,9 +267,9 @@ table.news {
     width: 100%;
 }
 
-table.news, th {
-    /* border: 1px solid gray; */
-}
+/* table.news, th {
+    border: 1px solid gray;
+} */
 
 table.news td {
     /* border: 1px solid gray; */
