@@ -71,6 +71,18 @@ main {
     color: black !important;
 }
 
+li.nav-item.dropdown .dropdown-menu.show ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px; 
+    padding: 5px;
+}
+
+li.nav-item.dropdown .dropdown-menu.show ul li {
+    width: 150px;
+    margin-bottom: 5px;
+}
+
 .search-section {
     border: 3px solid black;
     border-radius: 10px;
