@@ -83,6 +83,11 @@ li.nav-item.dropdown .dropdown-menu.show ul li {
     margin-bottom: 5px;
 }
 
+li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
+    background-color: rgb(20, 41, 54) !important;
+    color: white !important;
+}
+
 .search-section {
     border: 3px solid black;
     border-radius: 10px;
@@ -209,9 +214,27 @@ li.nav-item.dropdown .dropdown-menu.show ul li {
     margin-bottom: 50px;
 }
 
-.top-views ul {
+/* .top-views ul {
     height: 500px;
     overflow-y: scroll;
+} */
+
+.tab-aside .nav-link {
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.tab-aside .nav-link:hover {
+    border-bottom: 2px solid #039be5;
+}
+
+.tab-aside .nav-link.active {
+    border-bottom: 2px solid #039be5;
+}
+
+div.tab-content {
+    border: 1px solid rgba(71, 71, 71, 0.2);
 }
 
 .sidebar h4 {
@@ -242,7 +265,7 @@ li.nav-item.dropdown .dropdown-menu.show ul li {
 .sidebar ul li {
     display: flex; 
     flex-wrap: wrap;
-    border: 1px solid rgba(71, 71, 71, 0.2);
+    /* border: 1px solid rgba(71, 71, 71, 0.2); */
 }
 
 /* .sidebar ul li:nth-child(even) {
@@ -256,6 +279,7 @@ a.top-title {
     text-align: left;
     margin: 5px;
     text-decoration: none;
+    text-transform: capitalize;
 }
 
 a.top-title:hover {
