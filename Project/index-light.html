@@ -87,20 +87,16 @@
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
-                <li class="nav-item">
-                    <a href="dangnhap.html" class="nav-link">
-                        <button type="submit" value="Đăng nhập" class="log-button btn btn-success">Đăng nhập</button>
-                    </a>
+                <li class="nav-item nav-link">
+                    <button onclick="OpenSignInForm()" type="submit" value="Đăng nhập" class="log-button btn btn-success">Đăng nhập</button>
                 </li>
-                <li class="nav-item" style="margin-left: 20px">
-                    <a href="dangky.html" class="nav-link">
-                        <button type="submit" value="Đăng ký" class="log-button btn btn-success">Đăng ký</button>
-                    </a>
+                <li class="nav-item nav-link" style="margin-left: 20px">
+                    <button onclick="OpenSignUpForm()" type="submit" value="Đăng ký" class="log-button btn btn-success">Đăng ký</button>
                 </li>
             </ul>
         </div>
     </nav>
-    <div class="header-top">
+    <div class="header-top" id="cover">
         <img src="./img/cover.png">
     </div>
     <div class="container-fluid new-manga-slide" id="category">
@@ -1289,6 +1285,32 @@
             </div>
         </div>
     </div>
+    <div class="SignInFrm" id="SignIn">
+        <form action="" class="form-container">
+            <h2>Đăng nhập</h2>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
+            <button class="btn btn-success" id="sign" onclick="">Sign In</button>
+            <button class="btn btn-danger" id="close" onclick="CloseSignInForm()">Close</button>
+        </form> 
+    </div>
+    <div class="SignUpFrm" id="SignUp">
+        <form action="" class="form-container">
+            <h2>Đăng ký</h2>
+            <label for="email"><b>Email</b></label>
+            <input type="email" name="email-signup-input" id="email" placeholder="Enter email" required>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" name="password-signup-input" id="password" placeholder="Enter password" required>
+            <label for="password"><b>Password verify</b></label>
+            <input type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
+            <button class="btn btn-success" id="sign" onclick="">Sign Up</button>
+            <button class="btn btn-danger" id="close" onclick="CloseSignUpForm()">Close</button>
+        </form>
+    </div>
     <footer class="page-footer" id="contact">
         <div class="bg-primary">
             <div class="container">
@@ -1333,11 +1355,12 @@
                 </div>
             </div>
         </div>
-
         <div class="footer-copyright text-center py-3">
             <p>&copy;Copyright </p>
             <p>Conçu par l'équipe [....] </p>
         </div>
     </footer>
+
+    <script src="./js/animation.js"></script>
 </body>
 </html>
