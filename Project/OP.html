@@ -8,11 +8,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style-lg.css">
-    <title>Demo</title>
+    <title>One Piece</title>
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-md sticky-top navbar-light">
@@ -96,586 +94,75 @@
             </ul>
         </div>
     </nav>
-    <div class="header-top" id="cover">
-        <img src="./img/cover.png">
+    <div class="header-top" id="cover" style="margin-top: 30px">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index-light.html"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
+              <li class="breadcrumb-item"><a href="#">Cập nhật</a></li>
+              <li class="breadcrumb-item active" aria-current="page">One Piece</li>
+            </ol>
+          </nav>
     </div>
-    <div class="container-fluid new-manga-slide" id="category">
-        <div class="slide-show">
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-    
-                <!--Controls-->
-                <div class="controls-top text-center">
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                        class="fas fa-chevron-right"></i></a>
-                  </div>
-                <!--/.Controls-->
-
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-    
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/action.png" alt="">
-                                    <p class="manga-slide-item-text">Hành động</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/shounen.jpg" alt="">
-                                    <p class="manga-slide-item-text">Shounen</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/adventure.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Phiêu lưu</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/fiction.jpg" alt="">
-                                    <p class="manga-slide-item-text">Viễn tưởng</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/detective.jpg" alt="">
-                                    <p class="manga-slide-item-text">Trinh thám</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/drama.jpg" alt="">
-                                    <p class="manga-slide-item-text">Drama</p>
-                                </a>
-                            </div>
-                        </div>
+    <div class="container-fluid manga-box-detail">
+        <div class="manga-cover">
+            <img src="img/cover/OPc.jpg" class="cover-img-manga">
+            <div class="manga-detail">
+                <!-- <div class="media">
+                    <div class="media-left">
+                        <a href="#">
+                            <img src="img/OPv.png">
+                        </a>
                     </div>
-                    <!--/.First slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/romance.jpg" alt="">
-                                    <p class="manga-slide-item-text">Tình cảm</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/SOL.jpg" alt="">
-                                    <p class="manga-slide-item-text">Đời thường</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/comedy.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">hài hước</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/isekai.png" alt="">
-                                    <p class="manga-slide-item-text">Xuyên không</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/horror.png" alt="">
-                                    <p class="manga-slide-item-text">Kinh dị</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/schoollife.jpg" alt="">
-                                    <p class="manga-slide-item-text">Học đường</p>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="media-body">
+                        <p class="category-part">Shounen - Action - Magic - Comedy</p>
+                        <h5 class="media-heading">
+                            <a href="OP.html" class="chart-title"><strong>One Piece</strong></a>
+                        </h5>
                     </div>
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/mecha.jpg" alt="">
-                                    <p class="manga-slide-item-text">Người máy</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/psycho.png" alt="">
-                                    <p class="manga-slide-item-text">Tâm lý</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/oneshot.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">Oneshot</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/manhwa.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhwa</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/manhua.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhhua</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/sport.jpg" alt="">
-                                    <p class="manga-slide-item-text">Thể thao</p>
-                                </a>
-                            </div>
-                        </div>
+                </div> -->
+                <img src="img/OPv.png" class="description-img">
+                <div class="description">
+                    <p class="description-category">Shounen - Action - Magic - Comedy</p>
+                    <h2 class="description-title display-4">One Piece</h2>
+                    <p><strong>Tác giả: </strong>Eiichiro Oda</p>
+                    <p><strong>Nguồn truyện: </strong>Đang cập nhật </p> <br>
+                    <div class="user-action">
+                        <a href="#" class="btn btn-primary">Thích</a>
+                        <a href="#" class="btn btn-light dropdown-toggle share-btn" data-toggle="dropdown">Chia sẻ</a>
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Facebook</a></li>
+                            <li><a class="dropdown-item" href="#">Twitter</a></li>
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-danger">Báo cáo</a>
                     </div>
-                    <!--/.Third slide-->
-                    
-                </div>
-                <!--/.Slides-->
-                <div class="text-center mt-2 mb-2">
-                    <a href="#category" class="btn btn-primary rounded-pill text-uppercase" style="font-size: larger; font-weight: bold;">
-                        Tất cả thể loại
-                    </a>
                 </div>
             </div>
-            <!--/.Carousel Wrapper-->
+        </div>
+        <nav class="tab-aside container info-nav">
+            <div class="nav nav-tabs" role="">
+                <a href="#introduction" class=" nav-item nav-link active" data-toggle="tab" role="tab">Nội dung</a>
+                <a href="#chapter" class="nav-item nav-link" data-toggle="tab" role="tab">Chapter</a>
+            </div>
+        </nav>
+        <div class="tab-content container info-nav-content" style="border: none;">
+            <div class="tab-pane container active" role="tabpanel" id="introduction">
+                <p>
+                    One Piece là câu truyện kể về Luffy và các thuyền viên của mình. Khi còn nhỏ,
+                    Luffy ước mơ trở thành Vua Hải Tặc. Cuộc sống của cậu bé thay đổi khi cậu vô
+                    tình có được sức mạnh có thể co dãn như cao su, nhưng đổi lại, cậu không bao giờ có thể bơi được nữa. 
+                    Giờ đây, Luffy cùng những người bạn hải tặc của mình ra khơi tìm kiếm kho báu One Piece, kho báu vĩ đại nhất
+                    trên thế giới. Trong One Piece, mỗi nhân vật trong đều mang một nét cá tính đặc sắc kết hợp cùng các tình huống
+                    kịch tính, lối dẫn truyện hấp dẫn chứa đầy các bước ngoặt bất ngờ và cũng vô cùng hài hước đã biến One Piece trở
+                    thành một trong những bộ truyện nổi tiếng nhất không thể bỏ qua. Hãy đọc One Piece để hòa mình vào một thế giới của những hải tặc 
+                    rộng lớn, đầy màu sắc, sống động và thú vị, cùng đắm chìm với những nhân vật yêu tự do, trên hành trình đi tìm ước mơ của mình.  
+                </p>
+            </div>
         </div>
     </div>
+    </div>
     <main>
-        <div class="container-fluid news-bar" id="news">
-            <table class="news">
-                <tr>
-                    <th colspan="4">Tin tức</th>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 22/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 22,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 15/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 15,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 08/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 08,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 01/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 01,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 27/06/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 27,th6, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="container-fluid" id="update">
-            <section class="content">
-                <p class="manga-header">
-                    <i class="fa fa-bars"></i>   Truyện mới cập nhật
-                </p>
-                <div class="manga-list">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="OP.html">
-                                        <img src="img/OPv.png" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="OP.html" class="chart-title"><strong>One Piece (chap 1000)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="OP.html" class="vietsub">Đảo hải tặc</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>23, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 12345678</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/narutov.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Naruto Shippuden (chap 701)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Naruto</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>15, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 16276410</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/doraemonv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Doraemon</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Mặt trăng phiêu lưu ký</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>12, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 24857263</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/kimetsuv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Kimetsu no Yaiba (chap 500)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Thanh gươm diệt quỷ</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>10, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 38423684</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/SAOv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Sword Art Online</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Alicivization World</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>08, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 4536234514</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/dragonballv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Dragon Ball Z</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">7 viên ngọc rồng</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>01, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 865234953</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/conanv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Detective Conan</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Thám tử lừng danh Conan</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>30, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 2347854234</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/inuyashav.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Inuyasha</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Khuyển dạ xoa</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>25, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 234537239</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/kurokov.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Kuroko no basket</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Kuroko no Basket</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>20, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 23764523</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/relifev.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>ReLife</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Relife</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>18, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 89437564</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--Tac pham moi -->
         <div class="container-fluid" id="new-manga">
             <section class="content">
                 <p class="manga-header">
@@ -1050,7 +537,7 @@
                         <li>
                             <img src="img/OP.jpg" alt="">
                             <div class="side-info">
-                                <a href="#" class="top-title">One Piece</a>
+                                <a href="OP.html" class="top-title">One Piece</a>
                                 <p class="views"><span class="fa fa-eye"></span> 92347542</p>
                             </div>
                         </li>
@@ -1285,32 +772,6 @@
             </div>
         </div>
     </div>
-    <div class="SignInFrm" id="SignIn">
-        <form action="" class="form-container">
-            <h2>Đăng nhập</h2>
-            <label for="email"><b>Email</b></label>
-            <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required>
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
-            <button class="btn btn-success" id="sign" onclick="">Sign In</button>
-            <button class="btn btn-danger" id="close" onclick="CloseSignInForm()">Close</button>
-        </form> 
-    </div>
-    <div class="SignUpFrm" id="SignUp">
-        <form action="" class="form-container">
-            <h2>Đăng ký</h2>
-            <label for="email"><b>Email</b></label>
-            <input type="email" name="email-signup-input" id="email" placeholder="Enter email" required>
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" name="password-signup-input" id="password" placeholder="Enter password" required>
-            <label for="password"><b>Password verify</b></label>
-            <input type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
-            <button class="btn btn-success" id="sign" onclick="">Sign Up</button>
-            <button class="btn btn-danger" id="close" onclick="CloseSignUpForm()">Close</button>
-        </form>
-    </div>
     <footer class="page-footer" id="contact">
         <div class="bg-primary">
             <div class="container">
@@ -1361,6 +822,7 @@
         </div>
     </footer>
 
-    <script src="./js/animation.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>

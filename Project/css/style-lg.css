@@ -471,7 +471,7 @@ form {
     top: 20%;
     left: 15%;
     border: 2px solid black;
-    z-index: 10;
+    z-index: 11;
 }
 
 .form-container {
@@ -498,3 +498,111 @@ form {
     width: 100%;
     margin-bottom: 10px;
 }
+
+/* Page chi tiet */
+
+.header-top nav ol li {
+    font-size: x-large;
+}
+
+.header-top nav ol li a {
+    color: black;
+}
+
+.header-top nav ol li a:hover {
+    text-decoration: none;
+}
+
+/* .breadcrumb > li + li::before {
+    content: ">> ";
+} */
+
+.manga-box-detail {
+    grid-area: slide;
+}
+
+img.cover-img-manga {
+    height: 500px;
+    width: 100%;
+    filter: brightness(30%);
+}
+
+.info-nav {
+    font-size: x-large;
+}
+
+.info-nav-content {
+    padding: 20px;
+    font-size: larger;
+}
+
+.manga-cover {
+    position: relative;
+}
+
+.description-img {
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    right: 0;
+    width: 250px;
+    height: 300px;
+}
+
+/* .manga-detail img {
+    width: 20%;
+    height: 60%;
+} */
+
+.description {
+    position: absolute;
+    top: 20%;
+    left: 26%;
+    right: 0;
+    line-height: 1rem;
+}
+
+.manga-cover .description {
+    color: white !important;
+    text-shadow: 5px 5px 10px black !important;
+    font-family: "Lato",sans-serif !important;
+}
+
+.description-category, .description-title {
+    font-weight: bold;
+}
+
+a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
+    color: black !important;
+    text-shadow: none;
+}
+
+.user-action .dropdown-menu li a:hover {
+    color: white !important;
+    font-weight: bold;
+    background-color: rgb(20, 41, 54) !important;
+}
+
+/* .manga-cover .description-category {
+    font-size: x-large;
+}
+
+.manga-cover .description-title {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.user-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.favorite, .rating-star {
+    border: 2px solid white;
+    background-color: transparent;
+    border-radius: 45%;
+    padding: 10px;
+    margin-left: 5px;
+} */
+
