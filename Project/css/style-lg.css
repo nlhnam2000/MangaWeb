@@ -193,6 +193,7 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
     margin: 0 auto;
     left: 0;
     right: 0;
+    text-shadow: 5px 5px 10px black !important;
 }
 
 .controls-top a {
@@ -456,7 +457,7 @@ form {
     background-color: rgba(225,225,225,1);
 } */
 
-.SignInFrm {
+/* .SignInFrm {
     display: none;
     position: fixed;
     top: 30%;
@@ -472,9 +473,9 @@ form {
     left: 15%;
     border: 2px solid black;
     z-index: 11;
-}
+} */
 
-.form-container {
+/* .form-container {
     width: auto;
     padding: 20px;
     background-color: white;
@@ -497,8 +498,14 @@ form {
 .form-container button {
     width: 100%;
     margin-bottom: 10px;
+} */
+
+#SignIn, #SignUp {
+    position: fixed;
+    top: 30%;
 }
 
+/*************************/
 /* Page chi tiet */
 
 .header-top nav ol li {
@@ -568,6 +575,10 @@ img.cover-img-manga {
     font-family: "Lato",sans-serif !important;
 }
 
+.manga-cover .description .btn {
+    text-shadow: none;
+}
+
 .description-category, .description-title {
     font-weight: bold;
 }
@@ -583,26 +594,22 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     background-color: rgb(20, 41, 54) !important;
 }
 
-/* .manga-cover .description-category {
-    font-size: x-large;
+.fa {
+    cursor: pointer;
+    user-select: none;
 }
 
-.manga-cover .description-title {
-    font-size: 50px;
-    font-weight: bold;
+.fa:hover {
+    color: #039be5;
 }
 
-.user-button {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.chapter-link {
+    text-decoration: none;
+    color: black;
+    font-size: smaller;
 }
 
-.favorite, .rating-star {
-    border: 2px solid white;
-    background-color: transparent;
-    border-radius: 45%;
-    padding: 10px;
-    margin-left: 5px;
-} */
-
+.chapter-link:hover {
+    color: #039be5;
+    text-decoration: none;
+}

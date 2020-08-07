@@ -88,10 +88,10 @@
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
                 <li class="nav-item nav-link">
-                    <button onclick="OpenSignInForm()" type="submit" value="Đăng nhập" class="log-button btn btn-success">Đăng nhập</button>
+                    <button class="log-button btn btn-success" data-toggle="modal" data-target="#SignIn">Đăng nhập</button>
                 </li>
                 <li class="nav-item nav-link" style="margin-left: 20px">
-                    <button onclick="OpenSignUpForm()" type="submit" value="Đăng ký" class="log-button btn btn-success">Đăng ký</button>
+                    <button class="log-button btn btn-success" data-toggle="modal" data-target="#SignUp">Đăng ký</button>
                 </li>
             </ul>
         </div>
@@ -362,7 +362,7 @@
                                 </div>
                                 <div class="media-body">
                                     <h5 class="media-heading">
-                                        <a href="OP.html" class="chart-title"><strong>One Piece (chap 1000)</strong></a>
+                                        <a href="detail/OP.html" class="chart-title"><strong>One Piece (chap 1000)</strong></a>
                                     </h5>
                                     <div>
                                         <a href="OP.html" class="vietsub">Đảo hải tặc</a>
@@ -1050,7 +1050,7 @@
                         <li>
                             <img src="img/OP.jpg" alt="">
                             <div class="side-info">
-                                <a href="#" class="top-title">One Piece</a>
+                                <a href="detail/OP.html" class="top-title">One Piece</a>
                                 <p class="views"><span class="fa fa-eye"></span> 92347542</p>
                             </div>
                         </li>
@@ -1285,32 +1285,79 @@
             </div>
         </div>
     </div>
-    <div class="SignInFrm" id="SignIn">
-        <form action="" class="form-container">
-            <h2>Đăng nhập</h2>
-            <label for="email"><b>Email</b></label>
-            <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required>
+    <div class="modal" id="SignIn">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Đăng nhập</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="form-container">
+                    <div>
+                        <label for="email" style="width: 100%;"><b>Email</b></label>
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
+                    </div>
+                </form> 
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Đăng nhập</button>
+            </div>
 
-            <label for="password"><b>Password</b></label>
-            <input type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
-            <button class="btn btn-success" id="sign" onclick="">Sign In</button>
-            <button class="btn btn-danger" id="close" onclick="CloseSignInForm()">Close</button>
-        </form> 
-    </div>
-    <div class="SignUpFrm" id="SignUp">
-        <form action="" class="form-container">
-            <h2>Đăng ký</h2>
-            <label for="email"><b>Email</b></label>
-            <input type="email" name="email-signup-input" id="email" placeholder="Enter email" required>
-
-            <label for="password"><b>Password</b></label>
-            <input type="password" name="password-signup-input" id="password" placeholder="Enter password" required>
-            <label for="password"><b>Password verify</b></label>
-            <input type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
-            <button class="btn btn-success" id="sign" onclick="">Sign Up</button>
-            <button class="btn btn-danger" id="close" onclick="CloseSignUpForm()">Close</button>
-        </form>
-    </div>
+          </div>
+        </div>
+      </div>
+    <div class="modal" id="SignUp">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Đăng kí</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="form-container">
+                    <div>
+                        <label for="email" style="width: 100%;"><b>Email</b></label>
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label style="width: 100%;" for="password"><b>Password verify</b></label>
+                        <input style="width: 100%;" type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
+                    </div>
+                </form> 
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Đăng ký</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
     <footer class="page-footer" id="contact">
         <div class="bg-primary">
             <div class="container">
