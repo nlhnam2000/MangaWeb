@@ -8,17 +8,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style-lg.css">
-    <title>Demo</title>
+    <link rel="stylesheet" href="../css/style-lg.css">
+    <title>Black Clover</title>
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-md sticky-top navbar-light">
-        <a href="index-light.html" class="navbar-branch" style="margin-right: 30px;">
+        <a href="../index-light.html" class="navbar-branch" style="margin-right: 30px;">
             <!-- <h3 class="mb-0 site-logo">LOGO</h3> -->
-            <img src="./img/logo.jpg" class="logo">
+            <img src="../img/logo.jpg" class="logo">
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse"
         data-target="#navbarResponsive">
@@ -27,7 +25,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="index-light.html" class="nav-link active">Trang chủ</a>
+                    <a href="../index-light.html" class="nav-link active">Trang chủ</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -96,586 +94,77 @@
             </ul>
         </div>
     </nav>
-    <div class="header-top" id="cover">
-        <img src="./img/cover.png">
+    <div class="header-top" id="cover" style="margin-top: 30px">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index-light.html"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
+              <li class="breadcrumb-item"><a href="#">Cập nhật</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Black Clover</li>
+            </ol>
+          </nav>
     </div>
-    <div class="container-fluid new-manga-slide" id="category">
-        <div class="slide-show">
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-    
-                <!--Controls-->
-                <div class="controls-top text-center">
-                    <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                    <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                        class="fas fa-chevron-right"></i></a>
-                  </div>
-                <!--/.Controls-->
-
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-    
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/action.png" alt="">
-                                    <p class="manga-slide-item-text">Hành động</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/shounen.jpg" alt="">
-                                    <p class="manga-slide-item-text">Shounen</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/adventure.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Phiêu lưu</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/fiction.jpg" alt="">
-                                    <p class="manga-slide-item-text">Viễn tưởng</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/detective.jpg" alt="">
-                                    <p class="manga-slide-item-text">Trinh thám</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/drama.jpg" alt="">
-                                    <p class="manga-slide-item-text">Drama</p>
-                                </a>
-                            </div>
-                        </div>
+    <div class="container-fluid manga-box-detail">
+        <div class="manga-cover">
+            <img src="../img/cover/BlackClover.jpeg" class="cover-img-manga">
+            <div class="manga-detail">
+                <img src="../img/topday/blackclover.jpg" class="description-img">
+                <div class="description">
+                    <p class="description-category">Shounen - Action - Magic - Comedy - Adventure</p>
+                    <h2 class="description-title display-4">Black Clover</h2>
+                    <p><strong>Tác giả: </strong>Tabata Yuuki</p>
+                    <p><strong>Nguồn truyện: </strong>Đang cập nhật </p> <br>
+                    <div class="user-action">
+                        <button class="btn btn-primary"><i onclick="Vote(this)" class="fa fa-thumbs-up"></i></button>
+                        <a href="#" class="btn btn-light dropdown-toggle share-btn" data-toggle="dropdown">Chia sẻ</a>
+                        <span class="caret"></span>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Facebook</a></li>
+                            <li><a class="dropdown-item" href="#">Twitter</a></li>
+                            <li><a class="dropdown-item" href="#">Instagram</a></li>
+                        </ul>
+                        <a href="#" class="btn btn-danger">Báo cáo</a>
                     </div>
-                    <!--/.First slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/romance.jpg" alt="">
-                                    <p class="manga-slide-item-text">Tình cảm</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/SOL.jpg" alt="">
-                                    <p class="manga-slide-item-text">Đời thường</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/comedy.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">hài hước</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/isekai.png" alt="">
-                                    <p class="manga-slide-item-text">Xuyên không</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/horror.png" alt="">
-                                    <p class="manga-slide-item-text">Kinh dị</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/schoollife.jpg" alt="">
-                                    <p class="manga-slide-item-text">Học đường</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/mecha.jpg" alt="">
-                                    <p class="manga-slide-item-text">Người máy</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/psycho.png" alt="">
-                                    <p class="manga-slide-item-text">Tâm lý</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/oneshot.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">Oneshot</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/manhwa.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhwa</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/manhua.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhhua</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="img/category/sport.jpg" alt="">
-                                    <p class="manga-slide-item-text">Thể thao</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--/.Third slide-->
-                    
-                </div>
-                <!--/.Slides-->
-                <div class="text-center mt-2 mb-2">
-                    <a href="#category" class="btn btn-primary rounded-pill text-uppercase" style="font-size: larger; font-weight: bold;">
-                        Tất cả thể loại
-                    </a>
                 </div>
             </div>
-            <!--/.Carousel Wrapper-->
+        </div>
+        <nav class="tab-aside container info-nav">
+            <div class="nav nav-tabs" role="">
+                <a href="#introduction" class=" nav-item nav-link active" data-toggle="tab" role="tab">Nội dung</a>
+                <a href="#chapter" class="nav-item nav-link" data-toggle="tab" role="tab">Chapter</a>
+            </div>
+        </nav>
+        <div class="tab-content container info-nav-content" style="border: none;">
+            <div class="tab-pane container active" role="tabpanel" id="introduction">
+                <p><pre><i class="fa fa-eye"> 81723</i>    <i class="fa fa-thumbs-up"> 23641</i></pre></p>
+                <p>
+                    Aster và Yuno là hai đứa trẻ bị bỏ rơi ở nhà thờ và cùng nhau lớn lên tại đó. Khi còn nhỏ, chúng đã hứa với nhau xem ai sẽ trở thành Ma pháp vương tiếp theo. Khi cả hai lớn lên, mọi sô chuyện đã thay đổi. Yuno là thiên tài ma pháp với sức mạnh tuyệt đỉnh trong khi Aster lại không thể sử dụng ma pháp và cố gắng bù đắp bằng thể lực. Thế nhưng, sức mạnh của kẻ bị bỏ rơi Aster không phải chỉ như thế...
+
+                    Bộ truyện hiện đang đứng thứ 3 bảng xếp hạng Weekly Jump.
+                </p>
+            </div>
+            <div class="tab-pane container" role="tabpanel" id="chapter">
+                <ul class="chapter-list list-unstyled">
+                    <li class="chapter-item">
+                        <a href="#" class="chapter-link">Chapter 1</a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="#" class="chapter-link">Chapter 2</a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="#" class="chapter-link">Chapter 3</a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="#" class="chapter-link">Chapter 4</a>
+                    </li>
+                    <li class="chapter-item">
+                        <a href="#" class="chapter-link">Chapter 5</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+    </div>
     <main>
-        <div class="container-fluid news-bar" id="news">
-            <table class="news">
-                <tr>
-                    <th colspan="4">Tin tức</th>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 22/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 22,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 15/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 15,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 08/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 08,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 01/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 01,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 27/06/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 27,th6, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="container-fluid" id="update">
-            <section class="content">
-                <p class="manga-header">
-                    <i class="fa fa-bars"></i>   Truyện mới cập nhật
-                </p>
-                <div class="manga-list">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="OP.html">
-                                        <img src="img/OPv.png" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="detail/OP.html" class="chart-title"><strong>One Piece (chap 1000)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="OP.html" class="vietsub">Đảo hải tặc</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>23, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 12345678</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="detail/Naruto.html">
-                                        <img src="img/narutov.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="detail/Naruto.html" class="chart-title"><strong>Naruto Shippuden (chap 701)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="detail/Naruto.html" class="vietsub">Naruto</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>15, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 16276410</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/doraemonv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Doraemon</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Mặt trăng phiêu lưu ký</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>12, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 24857263</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/kimetsuv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Kimetsu no Yaiba (chap 500)</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Thanh gươm diệt quỷ</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>10, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 38423684</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/SAOv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Sword Art Online</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Alicivization World</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>08, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 4536234514</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/dragonballv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Dragon Ball Z</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">7 viên ngọc rồng</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>01, Th7, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 865234953</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/conanv.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Detective Conan</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Thám tử lừng danh Conan</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>30, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 2347854234</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/inuyashav.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Inuyasha</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Khuyển dạ xoa</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>25, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 234537239</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/kurokov.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>Kuroko no basket</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Kuroko no Basket</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>20, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 23764523</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="media" style="margin-bottom: 20px">
-                                <div class="media-left">
-                                    <a href="#">
-                                        <img src="img/relifev.jpg" width="100">
-                                    </a>
-                                </div>
-                                <div class="media-body">
-                                    <h5 class="media-heading">
-                                        <a href="#" class="chart-title"><strong>ReLife</strong></a>
-                                    </h5>
-                                    <div>
-                                        <a href="#" class="vietsub">Relife</a>
-                                    </div>
-                                    <small>
-                                        <i class="fa fa-clock-o"></i>18, Th6, 2020
-                                    </small>
-                                    <br>
-                                    <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                    </div>
-                                    <div class="views">
-                                        <i class="fa fa-eye"></i> 89437564</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--Tac pham moi -->
         <div class="container-fluid" id="new-manga">
             <section class="content">
                 <p class="manga-header">
@@ -687,7 +176,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/AOT.jpg" width="100">
+                                        <img src="../img/newmanga/AOT.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -702,11 +191,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 42342312</p>
@@ -718,12 +207,12 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/blackclover.jpg" width="100">
+                                        <img src="../img/newmanga/blackclover.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
                                     <h5 class="media-heading">
-                                        <a href="detail/Black-Clover.html" class="chart-title"><strong>Black Clover</strong></a>
+                                        <a href="#" class="chart-title"><strong>Black Clover</strong></a>
                                     </h5>
                                     <div>
                                         <a href="#" class="vietsub">Pháp sư không phép thuật</a>
@@ -733,11 +222,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 1874</p>
@@ -751,7 +240,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/bokunohero.jpg" width="100">
+                                        <img src="../img/newmanga/bokunohero.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -766,11 +255,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 9812</p>
@@ -782,7 +271,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/conan.jpg" width="100">
+                                        <img src="../img/newmanga/conan.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -797,11 +286,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 235221</p>
@@ -815,7 +304,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/deathnote.jpg" width="100">
+                                        <img src="../img/newmanga/deathnote.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -830,11 +319,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 25623</p>
@@ -846,7 +335,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/haikyuu.jpg" width="100">
+                                        <img src="../img/newmanga/haikyuu.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -861,11 +350,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 9483</p>
@@ -879,7 +368,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/masamune.jpg" width="100">
+                                        <img src="../img/newmanga/masamune.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -894,11 +383,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i>5689734</p>
@@ -910,7 +399,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/onmyouji.jpg" width="100">
+                                        <img src="../img/newmanga/onmyouji.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -925,11 +414,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 092734</p>
@@ -943,7 +432,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/persona.jpg" width="100">
+                                        <img src="../img/newmanga/persona.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -958,11 +447,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 9123</p>
@@ -974,7 +463,7 @@
                             <div class="media" style="margin-bottom: 20px">
                                 <div class="media-left">
                                     <a href="#">
-                                        <img src="img/newmanga/TG.jpg" width="100">
+                                        <img src="../img/newmanga/TG.jpg" width="100">
                                     </a>
                                 </div>
                                 <div class="media-body">
@@ -989,11 +478,11 @@
                                     </small>
                                     <br>
                                     <div class="rating">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
-                                        <img src="img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
+                                        <img src="../img/rating.png" width="20">
                                     </div>
                                     <div class="views">
                                         <i class="fa fa-eye"></i> 345123</p>
@@ -1020,56 +509,56 @@
                 <div class="tab-pane container-fluid active" id="month" role="tabpanel">
                     <ul class="list-unstyled">
                         <li>
-                            <img src="img/TokyoGhoul.jpg" alt="">
+                            <img src="../img/TokyoGhoul.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Tokyo Ghoul</a>
                                 <p class="views"><span class="fa fa-eye"></span> 36429834</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/kimetsu.jpg" alt="">
+                            <img src="../img/kimetsu.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Kimetsu no Yaiba</a>
                                 <p class="views"><span class="fa fa-eye"></span> 12345678</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/naruto.jpg" alt="">
+                            <img src="../img/naruto.jpg" alt="">
                             <div class="side-info">
-                                <a href="detail/Naruto.html" class="top-title">Naruto Shippuden</a>
+                                <a href="#" class="top-title">Naruto Shippuden</a>
                                 <p class="views"><span class="fa fa-eye"></span> 87654321</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/SAO.jpeg" alt="">
+                            <img src="../img/SAO.jpeg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">S.A.O: Alicivization World</a>
                                 <p class="views"><span class="fa fa-eye"></span> 12347894</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/OP.jpg" alt="">
+                            <img src="../img/OP.jpg" alt="">
                             <div class="side-info">
-                                <a href="detail/OP.html" class="top-title">One Piece</a>
+                                <a href="../detail/OP.html" class="top-title">One Piece</a>
                                 <p class="views"><span class="fa fa-eye"></span> 92347542</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/conan2.jpg" alt="">
+                            <img src="../img/conan2.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Detective Conan</a>
                                 <p class="views"><span class="fa fa-eye"></span> 7298734</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/inuyasha.jpg" alt="">
+                            <img src="../img/inuyasha.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Inuyasha</a>
                                 <p class="views"><span class="fa fa-eye"></span> 234537239</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/doraemon.jpg" alt="">
+                            <img src="../img/doraemon.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Doraemon</a>
                                 <p class="views"><span class="fa fa-eye"></span> 24032000</p>
@@ -1080,35 +569,35 @@
                 <div class="tab-pane container fade" id="week">
                     <ul class="list-unstyled">
                         <li>
-                            <img src="img/topweek/AOT.jpg" alt="">
+                            <img src="../img/topweek/AOT.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Attack on Titan</a>
                                 <p class="views"><span class="fa fa-eye"></span> 42342312</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topweek/persona5.jpg" alt="">
+                            <img src="../img/topweek/persona5.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Persona 5: Mementos Mission</a>
                                 <p class="views"><span class="fa fa-eye"></span> 9123</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topweek/DBS.jpg" alt="">
+                            <img src="../img/topweek/DBS.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Dragon Ball Super</a>
                                 <p class="views"><span class="fa fa-eye"></span> 236423</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topweek/KnB.jpeg" alt="">
+                            <img src="../img/topweek/KnB.jpeg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Kuroko no Basket</a>
                                 <p class="views"><span class="fa fa-eye"></span> 342365</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topweek/RL.jpg" alt="">
+                            <img src="../img/topweek/RL.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">ReLife</a>
                                 <p class="views"><span class="fa fa-eye"></span> 98734</p>
@@ -1119,35 +608,35 @@
                 <div class="tab-pane container fade" id="day">
                     <ul class="list-unstyled">
                         <li>
-                            <img src="img/topday/blackclover.jpg" alt="">
+                            <img src="../img/topday/blackclover.jpg" alt="">
                             <div class="side-info">
-                                <a href="detail/Black-Clover.html" class="top-title">Black Clover</a>
+                                <a href="#" class="top-title">Black Clover</a>
                                 <p class="views"><span class="fa fa-eye"></span> 2340948</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topday/bokunohero.jpg" alt="">
+                            <img src="../img/topday/bokunohero.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Boku no hero academia</a>
                                 <p class="views"><span class="fa fa-eye"></span> 89734</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topday/deathnote.jpg" alt="">
+                            <img src="../img/topday/deathnote.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Death Note</a>
                                 <p class="views"><span class="fa fa-eye"></span> 397453</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topday/masamune.png" alt="">
+                            <img src="../img/topday/masamune.png" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Masamune kun no revenge</a>
                                 <p class="views"><span class="fa fa-eye"></span> 892734</p>
                             </div>
                         </li>
                         <li>
-                            <img src="img/topday/onmyouji.jpg" alt="">
+                            <img src="../img/topday/onmyouji.jpg" alt="">
                             <div class="side-info">
                                 <a href="#" class="top-title">Sousei no Onmyouji</a>
                                 <p class="views"><span class="fa fa-eye"></span> 907234</p>
@@ -1358,6 +847,7 @@
           </div>
         </div>
       </div>
+
     <footer class="page-footer" id="contact">
         <div class="bg-primary">
             <div class="container">
@@ -1408,6 +898,8 @@
         </div>
     </footer>
 
-    <script src="./js/animation.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../js/animation.js"></script>
 </body>
 </html>
