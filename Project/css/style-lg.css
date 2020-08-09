@@ -88,28 +88,24 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
     color: white !important;
 }
 
-.search-section {
-    border: 3px solid black;
-    border-radius: 10px;
+#search-form input[type=text] {
+    width: 80%;
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
 }
 
-.search-section span {
-    height: 100%;
-}
-
-#searching {
-    background-color: white;
-    border: none;
-    color: black;
-}
-
-.search-button {
-    border: none;
-    margin: auto; 
-    background-image: url(../img/search_icon.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    align-items: center;
+#search-form button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
 }
 
 .new-manga-slide {
