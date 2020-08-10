@@ -33,7 +33,7 @@ body {
 }
 
 .header-top img {
-    width: 1500px;
+    width: 1440px;
     height: 650px;
     object-fit: cover;
 }
@@ -74,8 +74,7 @@ main {
 
 .navbar li a {
     color: white !important;
-    font-size: 24px;
-    padding-left: 3em;
+    font-size: 20px;
     margin-right: 12px;
 }
 
@@ -88,10 +87,10 @@ li.nav-item.dropdown .dropdown-menu.show ul {
     padding: 5px;
 }
 
-li.nav-item.dropdown .dropdown-menu.show ul li {
+li.nav-item.dropdown .dropdown-menu.show ul li a{
     width: 150px;
     margin-bottom: 5px;
-    
+    color: black !important;
 }
 
 
