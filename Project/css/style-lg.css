@@ -33,7 +33,11 @@ body {
 }
 
 .header-top img {
+<<<<<<< HEAD
     width: 1440px;
+=======
+    width: 100%;
+>>>>>>> 060c0b9a792ba850aceacd72ccc8619b65ae755e
     height: 650px;
     object-fit: cover;
 }
