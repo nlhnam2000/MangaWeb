@@ -1,12 +1,16 @@
-function Vote(x) {
-    // kiểm tra button có chứa icon like
-    // nếu có, xoá like, thêm dislike và ngược lại
-    if (x.classList.contains("fa-thumbs-up")) {
-        x.classList.remove("fa-thumbs-up"); 
-        x.classList.add("fa-thumbs-down"); 
+const likeButton = document.querySelector('#like-button'); 
+likeButton.addEventListener('click', function() {
+    if (this.classList.contains("fa-thumbs-up")) {
+        this.classList.remove("fa-thumbs-up"); 
+        this.classList.add("fa-thumbs-down"); 
     }
     else {
-        x.classList.remove("fa-thumbs-down"); 
-        x.classList.add("fa-thumbs-up"); 
+        this.classList.remove("fa-thumbs-down"); 
+        this.classList.add("fa-thumbs-up"); 
     }
-}
+})
+
+const dataSearch = document.forms['search-form'].querySelector('input'); 
+dataSearch.addEventListener('keyup', function(data) { 
+    
+})
