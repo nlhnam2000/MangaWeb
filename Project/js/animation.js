@@ -10,7 +10,7 @@ likeButton.addEventListener('click', function() {
     }
 })
 
-const dataSearch = document.forms['search-form'].querySelector('input'); 
-dataSearch.addEventListener('keyup', function(data) { 
+// const dataSearch = document.forms['search-form'].querySelector('input'); 
+// dataSearch.addEventListener('keyup', function(data) { 
     
-})
+// })
