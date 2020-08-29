@@ -12,7 +12,13 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>{{title}}</title>
+    <title>
+        {{#each title}}
+            {{#each this}}
+                {{this.name}}
+            {{/each}}
+        {{/each}}
+    </title>
 </head>
 <body class="bg-light">
     <nav class="navbar navbar-expand-md sticky-top navbar-light">
@@ -94,311 +100,82 @@
             </ul>
         </div>
     </nav>
-    <div class="header-top" id="cover">
-        <img src="/images/cover.png">
+    <div class="header-top" id="cover" style="margin-top: 30px">
+        <nav aria-label="breadcrumb">
+            {{#each mangaSearch}}
+                <ol class="breadcrumb">
+                    {{#each this}}
+                        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{this.name}}</li>
+                    {{/each}}
+                </ol>
+            {{/each}}
+          </nav>
     </div>
-    <div class="container-fluid new-manga-slide" id="category">
-        <div class="slide-show">
-            <!--Carousel Wrapper-->
-            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
-
-                <!--Controls-->
-                <div class="controls-top">
-                    <div class="row">
-                        <div class="col-6 text-left">
-                            <h4 style="text-transform: uppercase; color: white; font-weight: bold;">Danh sách thể loại</h4>
-                        </div>
-                        <div class="col-6 text-right">
-                            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
-                            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
-                        class="fas fa-chevron-right"></i></a>
+    <div class="container-fluid manga-box-detail">
+        {{#each mangaSearch}}
+            {{#each this}}
+                <div class="manga-cover">
+                    <img src="/{{this.cover}}" class="cover-img-manga">
+                    <div class="manga-detail">
+                        <img src="/{{this.avatar}}" class="description-img">
+                        <div class="description">
+                            <p class="description-category">{{this.category}}</p>
+                            <h2 class="description-title display-4">{{this.name}}</h2>
+                            <p><strong>Tác giả: </strong>{{this.author}}</p>
+                            <p><strong>Nguồn truyện: </strong>Đang cập nhật </p> <br>
+                            <div class="user-action">
+                                <button class="btn btn-primary"><i id="like-button" class="fa fa-thumbs-up"></i></button>
+                                <a href="#" class="btn btn-light dropdown-toggle share-btn" data-toggle="dropdown">Chia sẻ</a>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                    <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                </ul>
+                                <a href="#" class="btn btn-danger">Báo cáo</a>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-                <!--/.Controls-->
-
-                <!--Indicators-->
-                {{!-- <ol class="carousel-indicators">
-                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
-                    <li data-target="#multi-item-example" data-slide-to="1"></li>
-                    <li data-target="#multi-item-example" data-slide-to="2"></li>
-                </ol> --}}
-                <!--/.Indicators-->
-
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/action.png" alt="">
-                                    <p class="manga-slide-item-text">Hành động</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/shounen.jpg" alt="">
-                                    <p class="manga-slide-item-text">Shounen</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/adventure.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Phiêu lưu</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/fiction.jpg" alt="">
-                                    <p class="manga-slide-item-text">Viễn tưởng</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/detective.jpg" alt="">
-                                    <p class="manga-slide-item-text">Trinh thám</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/drama.jpg" alt="">
-                                    <p class="manga-slide-item-text">Drama</p>
-                                </a>
-                            </div>
-                        </div>
+                <nav class="tab-aside container info-nav">
+                    <div class="nav nav-tabs" role="">
+                        <a href="#introduction" class=" nav-item nav-link active" data-toggle="tab" role="tab">Nội dung</a>
+                        <a href="#chapter" class="nav-item nav-link" data-toggle="tab" role="tab">Chapter</a>
                     </div>
-                    <!--/.First slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/romance.jpg" alt="">
-                                    <p class="manga-slide-item-text">Tình cảm</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/SOL.jpg" alt="">
-                                    <p class="manga-slide-item-text">Đời thường</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/comedy.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">hài hước</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/isekai.png" alt="">
-                                    <p class="manga-slide-item-text">Xuyên không</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/horror.png" alt="">
-                                    <p class="manga-slide-item-text">Kinh dị</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/schoollife.jpg" alt="">
-                                    <p class="manga-slide-item-text">Học đường</p>
-                                </a>
-                            </div>
-                        </div>
+                </nav>
+                <div class="tab-content container info-nav-content" style="border: none;">
+                    <div class="tab-pane container active" role="tabpanel" id="introduction">
+                        <p><pre><i class="fa fa-eye"> {{this.view}}</i>    <i class="fa fa-thumbs-up"> {{this.like}}</i></pre></p>
+                        <p>
+                            {{this.description}} 
+                        </p>
                     </div>
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <div class="row">
-                            <div class="col-2">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/mecha.jpg" alt="">
-                                    <p class="manga-slide-item-text">Người máy</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/psycho.png" alt="">
-                                    <p class="manga-slide-item-text">Tâm lý</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/oneshot.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">Oneshot</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/manhwa.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhwa</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/manhua.jpeg" alt="">
-                                    <p class="manga-slide-item-text">Manhhua</p>
-                                </a>
-                            </div>
-                            <div class="col-2 clearfix d-none d-md-block">
-                                <a href="#" class="manga-slide-item-box">
-                                    <img src="/images/category/sport.jpg" alt="">
-                                    <p class="manga-slide-item-text">Thể thao</p>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="tab-pane container" role="tabpanel" id="chapter">
+                        <ul class="chapter-list list-unstyled">
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 1</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 2</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 3</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 4</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 5</a>
+                            </li>
+                        </ul>
                     </div>
-                    <!--/.Third slide-->
-
                 </div>
-                <!--/.Slides-->
-                <div class="text-center mt-2 mb-2">
-                    <a href="/category" class="btn btn-primary rounded-pill text-uppercase" style="font-size: larger; font-weight: bold;">
-                        Tất cả thể loại
-                    </a>
-                </div>
-            </div>
-            <!--/.Carousel Wrapper-->
-        </div>
+            {{/each}}
+        {{/each}}
+    </div>
     </div>
     <main>
-        <div class="container-fluid news-bar" id="news">
-            <table class="news">
-                <tr>
-                    <th colspan="4">Tin tức</th>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 22/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 22,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 15/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 15,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 08/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 08,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 01/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 01,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 27/06/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 27,th6, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div class="container-fluid" id="update">
-            <section class="content">
-                <p class="manga-header">
-                    <i class="fa fa-bars"></i>   Truyện mới cập nhật
-                </p>
-                <div class="manga-list">
-                    <div class="row">
-                        {{#each mangaUpdated}}
-                            <div class="col-sm-6">
-                                {{#each this}}
-                                    <div class="media" style="margin-bottom: 20px">
-                                        <div class="media-left">
-                                            <a href="/manga/{{this._id}}">
-                                                <img src="/{{ this.avatar }}" width="100">
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h5 class="media-heading">
-                                                <a href="/manga/{{this._id}}" class="chart-title"><strong>{{ this.name }}</strong></a>
-                                            </h5>
-                                            <div>
-                                                <a href="/manga/{{this._id}}" class="vietsub">{{ this.sub }}</a>
-                                            </div>
-                                            <small>
-                                                <i class="fa fa-clock-o"></i>{{this.date}}
-                                            </small>
-                                            <br>
-                                            <div class="rating">
-                                                <img src="/images/rating.png" width="20">
-                                                <img src="/images/rating.png" width="20">
-                                                <img src="/images/rating.png" width="20">
-                                                <img src="/images/rating.png" width="20">
-                                                <img src="/images/rating.png" width="20">
-                                            </div>
-                                            <div class="views">
-                                                <p><i class="fa fa-eye"></i> {{ this.view }}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {{/each}}
-                            </div>
-                        {{/each}}
-                    </div>
-                </div>
-            </section>
-        </div>
-        <!--Tac pham moi -->
         <div class="container-fluid" id="new-manga">
             <section class="content">
                 <p class="manga-header">
@@ -635,31 +412,31 @@
     <div class="modal" id="SignIn">
         <div class="modal-dialog">
           <div class="modal-content">
-
+          
             <!-- Modal Header -->
             <div class="modal-header">
               <h4 class="modal-title">Đăng nhập</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-
+            
             <!-- Modal body -->
             <div class="modal-body">
                 <form action="" class="form-container">
                     <div>
                         <label for="email" style="width: 100%;"><b>Email</b></label>
-                        <input type="email" name="email-signin-input" id="email" placeholder="Nhập email..." required style="width: 100%;">
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
                     </div>
                     <br>
                     <div>
-                        <label for="password" style="width: 100%;"><b>Mật khẩu</b></label>
-                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Nhập mật khẩu..." required>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
                     </div>
-                </form>
+                </form> 
             </div>
-
+            
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-success">Đăng nhập</button>
             </div>
 
@@ -669,52 +446,53 @@
     <div class="modal" id="SignUp">
         <div class="modal-dialog">
           <div class="modal-content">
-
+          
             <!-- Modal Header -->
             <div class="modal-header">
               <h4 class="modal-title">Đăng kí</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-
+            
             <!-- Modal body -->
             <div class="modal-body">
                 <form action="" class="form-container">
                     <div>
                         <label for="email" style="width: 100%;"><b>Email</b></label>
-                        <input type="email" name="email-signin-input" id="email" placeholder="Nhập email..." required style="width: 100%;">
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
                     </div>
                     <br>
                     <div>
-                        <label for="password" style="width: 100%;"><b>Mật khẩu</b></label>
-                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Nhập mật khẩu..." required>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
                     </div>
                     <br>
                     <div>
-                        <label style="width: 100%;" for="password"><b>Xác minh mật khẩu</b></label>
-                        <input style="width: 100%;" type="password" name="passwordv-input" id="password" placeholder="Nhập lại mật khẩu..." required>
+                        <label style="width: 100%;" for="password"><b>Password verify</b></label>
+                        <input style="width: 100%;" type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
                     </div>
-                </form>
+                </form> 
             </div>
-
+            
             <!-- Modal footer -->
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
               <button type="button" class="btn btn-success">Đăng ký</button>
             </div>
-
+            
           </div>
         </div>
       </div>
+
     <footer class="page-footer" id="contact">
-        <div class="bg">
+        <div class="bg-primary">
             <div class="container">
                 <div class="row py-4 d-flex align-items-center">
-                    <div class="col-md-12 text-center">
+                    <div class="col-md-12 text-center"> 
                         <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
-                        <a href="#"><i class="fab fa-twitter text-white mr-4"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g text-white mr-4"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in text-white mr-4"></i></a>
-                        <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>
+                        <a href="#"><i class="fab fa-twitter text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-google-plus-g text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>  
                     </div>
                 </div>
             </div>
@@ -755,6 +533,13 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        var categoryStr = document.querySelector('.description-category'); 
+        categoryStr.innerText = categoryStr.innerText.split(',').join(' - '); 
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/javascripts/effect.js"></script>
     <script src="/javascripts/function.js"></script>
 </body>
 </html>

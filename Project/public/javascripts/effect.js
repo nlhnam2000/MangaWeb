@@ -9,7 +9,3 @@ likeButton.addEventListener('click', function() {
         this.classList.add("fa-thumbs-up"); 
     }
 })
-
-// function CheckSearch() {
-//     const seachBar = document.forms["search-form"].querySelector('input'); 
-// }

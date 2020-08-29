@@ -79,9 +79,9 @@
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
                 <li class="nav-item">
-                    <form action="#" method="GET" role="search" id="search-form">
+                    <form action="/search" method="GET" id="search-form">
                         <div class="input-group search-width search-section">
-                            <input id="searching" type="text" name="login" placeholder="Tìm truyện"
+                            <input id="searching" type="text" name="q" placeholder="Tìm truyện..."
                                class="form-control text nav-link">
                             <button type="submit" value="Tìm kiếm" class="fa fa-search btn btn-primary">
                                 <!-- <img class="image-search" src="../img/search-icon.png" alt="searchicon" width="50"> -->
@@ -102,7 +102,7 @@
     </nav>
     <div class="header-top" id="cover" style="margin-top: 30px">
         <nav aria-label="breadcrumb">
-            {{#each title}}
+            {{#each mangaDetail}}
                 <ol class="breadcrumb">
                     {{#each this}}
                         <li class="breadcrumb-item"><a href="/"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
@@ -540,5 +540,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="/javascripts/effect.js"></script>
+    <script src="/javascripts/function.js"></script>
 </body>
 </html>

@@ -8,13 +8,19 @@ var Mangas = [];
 
 MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
     var dbo = database.db(dbName); 
-    var cursor = dbo.collection('manga').find({_id: ObjectId("5f42071c118ad61d5faa38f5")}); 
-    cursor.forEach(function(doc, err) {
-        if (err) 
-            throw err; 
-        if (doc != null) 
-            console.log(typeof(doc.name)) 
-    });
+    // var cursor = dbo.collection('manga').find({name: "Doraemon"}); 
+    // cursor.forEach(function(doc, err) {
+    //     if (err) 
+    //         throw err; 
+    //     if (doc != null) 
+    //         console.log(doc) 
+    // });
+    dbo.collection('manga').find({name: "Doraemon"}).toArray(function(err, result) {
+        // for (var i = 0; i < result.length; i++) {
+        //     Mangas.push(result.slice(i, i+1)); 
+        // }
+        console.log(result[0].name);
+    })
 }); 
 
 // module.exports = Mangas; 
