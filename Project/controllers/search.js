@@ -20,9 +20,9 @@ const searching = (req, res) => {
                 if (manga_name.indexOf(manga_search) !== -1) {
                     mangaSearch.push(result.slice(i, i+1)); 
                 }
-                else {
-                    res.send('<h1 style="text-align: center;">NOT FOUND</h1>');
-                }
+                // else {
+                //     res.send('<h1 style="text-align: center;">NOT FOUND</h1>');
+                // }
             }
         })
         dbo.collection('manga').find({ isNew: true }).toArray(function (err, result) {
@@ -45,7 +45,7 @@ const searching = (req, res) => {
                 topDay.push(result.slice(i, i + 1));
             }
             // console.log(mangaSearch); 
-            res.render('detail', { title: 'Search result', mangeDetail: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('search', { title: 'Search result', mangaSearch: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
     }); 
 
