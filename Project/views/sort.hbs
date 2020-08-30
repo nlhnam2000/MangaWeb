@@ -112,78 +112,182 @@
             {{/each}}
           </nav>
     </div>
-    <div class="container-fluid manga-box-detail">
-        {{#each mangaDetail}}
-            {{#each this}}
-                <div class="manga-cover">
-                    <img src="/{{this.cover}}" class="cover-img-manga">
-                    <div class="manga-detail">
-                        <img src="/{{this.avatar}}" class="description-img">
-                        <div class="description">
-                            <p class="description-category">{{this.category}}</p>
-                            <h2 class="description-title display-4">{{this.name}}</h2>
-                            <p><strong>Tác giả: </strong>{{this.author}}</p>
-                            <p><strong>Nguồn truyện: </strong>Đang cập nhật </p> <br>
-                            <div class="user-action">
-                                <button class="btn btn-primary"><i id="like-button" class="fa fa-thumbs-up"></i></button>
-                                <a href="#" class="btn btn-light dropdown-toggle share-btn" data-toggle="dropdown">Chia sẻ</a>
-                                <span class="caret"></span>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Facebook</a></li>
-                                    <li><a class="dropdown-item" href="#">Twitter</a></li>
-                                    <li><a class="dropdown-item" href="#">Instagram</a></li>
-                                </ul>
-                                <a href="#" class="btn btn-danger">Báo cáo</a>
+    <div class="container-fluid new-manga-slide" id="category">
+        <div class="slide-show">
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top">
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h4 style="text-transform: uppercase; color: white; font-weight: bold;">Danh sách thể loại</h4>
+                        </div>
+                        <div class="col-6 text-right">
+                            <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
+                            <a class="btn-floating" href="#multi-item-example" data-slide="next"><i
+                        class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <!--/.Controls-->
+
+                <!--Indicators-->
+                {{!-- <ol class="carousel-indicators">
+                    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li data-target="#multi-item-example" data-slide-to="1"></li>
+                    <li data-target="#multi-item-example" data-slide-to="2"></li>
+                </ol> --}}
+                <!--/.Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+                    <!--First slide-->
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="/category/Action" class="manga-slide-item-box">
+                                    <img src="/images/category/action.png" alt="">
+                                    <p class="manga-slide-item-text">Hành động</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Shounen" class="manga-slide-item-box">
+                                    <img src="/images/category/shounen.jpg" alt="">
+                                    <p class="manga-slide-item-text">Shounen</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Adventure" class="manga-slide-item-box">
+                                    <img src="/images/category/adventure.jpeg" alt="">
+                                    <p class="manga-slide-item-text">Phiêu lưu</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Fiction" class="manga-slide-item-box">
+                                    <img src="/images/category/fiction.jpg" alt="">
+                                    <p class="manga-slide-item-text">Viễn tưởng</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Detective" class="manga-slide-item-box">
+                                    <img src="/images/category/detective.jpg" alt="">
+                                    <p class="manga-slide-item-text">Trinh thám</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Drama" class="manga-slide-item-box">
+                                    <img src="/images/category/drama.jpg" alt="">
+                                    <p class="manga-slide-item-text">Drama</p>
+                                </a>
                             </div>
                         </div>
                     </div>
+                    <!--/.First slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="/category/Romance" class="manga-slide-item-box">
+                                    <img src="/images/category/romance.jpg" alt="">
+                                    <p class="manga-slide-item-text">Tình cảm</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/SOL" class="manga-slide-item-box">
+                                    <img src="/images/category/SOL.jpg" alt="">
+                                    <p class="manga-slide-item-text">Đời thường</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Comedy" class="manga-slide-item-box">
+                                    <img src="/images/category/comedy.jpg" alt="" width="200px" height="200px">
+                                    <p class="manga-slide-item-text">hài hước</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Isekai" class="manga-slide-item-box">
+                                    <img src="/images/category/isekai.png" alt="">
+                                    <p class="manga-slide-item-text">Xuyên không</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Horror" class="manga-slide-item-box">
+                                    <img src="/images/category/horror.png" alt="">
+                                    <p class="manga-slide-item-text">Kinh dị</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Schoollife" class="manga-slide-item-box">
+                                    <img src="/images/category/schoollife.jpg" alt="">
+                                    <p class="manga-slide-item-text">Học đường</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Second slide-->
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-2">
+                                <a href="/category/Mecha" class="manga-slide-item-box">
+                                    <img src="/images/category/mecha.jpg" alt="">
+                                    <p class="manga-slide-item-text">Người máy</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Psychology" class="manga-slide-item-box">
+                                    <img src="/images/category/psycho.png" alt="">
+                                    <p class="manga-slide-item-text">Tâm lý</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Oneshot" class="manga-slide-item-box">
+                                    <img src="/images/category/oneshot.jpg" alt="" width="200px" height="200px">
+                                    <p class="manga-slide-item-text">Oneshot</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Manhwa" class="manga-slide-item-box">
+                                    <img src="/images/category/manhwa.jpeg" alt="">
+                                    <p class="manga-slide-item-text">Manhwa</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Manhua" class="manga-slide-item-box">
+                                    <img src="/images/category/manhua.jpeg" alt="">
+                                    <p class="manga-slide-item-text">Manhhua</p>
+                                </a>
+                            </div>
+                            <div class="col-2 clearfix d-none d-md-block">
+                                <a href="/category/Sport" class="manga-slide-item-box">
+                                    <img src="/images/category/sport.jpg" alt="">
+                                    <p class="manga-slide-item-text">Thể thao</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.Third slide-->
+
                 </div>
-                <nav class="tab-aside container info-nav">
-                    <div class="nav nav-tabs" role="">
-                        <a href="#introduction" class=" nav-item nav-link active" data-toggle="tab" role="tab">Nội dung</a>
-                        <a href="#chapter" class="nav-item nav-link" data-toggle="tab" role="tab">Chapter</a>
-                    </div>
-                </nav>
-                <div class="tab-content container info-nav-content" style="border: none;">
-                    <div class="tab-pane container active" role="tabpanel" id="introduction">
-                        <p><pre><i class="fa fa-eye"> {{this.view}}</i>    <i class="fa fa-thumbs-up"> {{this.like}}</i></pre></p>
-                        <p>
-                            {{this.description}} 
-                        </p>
-                    </div>
-                    <div class="tab-pane container" role="tabpanel" id="chapter">
-                        <ul class="chapter-list list-unstyled">
-                            <li class="chapter-item">
-                                <a href="#" class="chapter-link">Chapter 1</a>
-                            </li>
-                            <li class="chapter-item">
-                                <a href="#" class="chapter-link">Chapter 2</a>
-                            </li>
-                            <li class="chapter-item">
-                                <a href="#" class="chapter-link">Chapter 3</a>
-                            </li>
-                            <li class="chapter-item">
-                                <a href="#" class="chapter-link">Chapter 4</a>
-                            </li>
-                            <li class="chapter-item">
-                                <a href="#" class="chapter-link">Chapter 5</a>
-                            </li>
-                        </ul>
-                    </div>
+                <!--/.Slides-->
+                <div class="text-center mt-2 mb-2">
+                    <a href="/category" class="btn btn-primary rounded-pill text-uppercase" style="font-size: larger; font-weight: bold;">
+                        Tất cả thể loại
+                    </a>
                 </div>
-            {{/each}}
-        {{/each}}
-    </div>
+            </div>
+            <!--/.Carousel Wrapper-->
+        </div>
     </div>
     <main>
         <div class="container-fluid" id="new-manga">
             <section class="content">
                 <p class="manga-header">
-                    <i class="fa fa-bars"></i>   Truyện mới phát hành
+                    <i class="fa fa-search"></i>    {{title}}
                 </p>
                 <div class="manga-list">
                     <div class="row">
-                        {{#each mangaNew}}
+                        {{#each mangaSort}}
                             <div class="col-sm-6">
                                 {{#each this}}
                                     <div class="media" style="margin-bottom: 20px">

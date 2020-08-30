@@ -13,9 +13,7 @@ router.get('/manga/:id', ctrlDetail.detail);
 router.get('/category', ctrlDetail.category); 
 
 router.get('/search', ctrlSearch.searching); 
-// router.get('/manga/search', (req, res) => {
-//     console.log(req.query.q);
-// })
+router.get('/category/:category', ctrlSearch.sorting); 
 
 
 module.exports = router;

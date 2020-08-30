@@ -60,23 +60,6 @@ const category = (req, res) => {
     res.render('category', {title: 'Thể loại'})
 }
 
-
-// const searching = (req, res) => {
-//     var manga_search = req.query.name; 
-//     var mangaSearched = []; 
-
-//     MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
-//         var dbo = database.db(dbName); 
-        
-//         dbo.collection('manga').find({ name: "Doraemon" }).toArray(function (err, result) {
-//             for (var i = 0; i < result.length; i++) {
-//                 mangaSearched.push(result.slice(i, i + 1));
-//             }
-//             res.render('detail', {mangaDetail: mangaSearched, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay});
-//         })
-//     })
-// }
-
 module.exports = {
     detail,
     category

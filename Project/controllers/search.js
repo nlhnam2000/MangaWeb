@@ -10,6 +10,7 @@ const searching = (req, res) => {
     var topWeek = [];
     var topDay = [];
     var mangaSearch = [];
+    var nameOfPage; 
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, database) {
         var manga_search = req.query.q.toLowerCase();
         var dbo = database.db(dbName);  
@@ -18,6 +19,7 @@ const searching = (req, res) => {
             for (var i = 0; i < result.length; i++) {
                 var manga_name = result[i].name.toLowerCase(); 
                 if (manga_name.indexOf(manga_search) !== -1) {
+                    nameOfPage = result[i].name; 
                     mangaSearch.push(result.slice(i, i+1)); 
                 }
                 // else {
@@ -45,12 +47,46 @@ const searching = (req, res) => {
                 topDay.push(result.slice(i, i + 1));
             }
             // console.log(mangaSearch); 
-            res.render('search', { title: 'Search result', mangaSearch: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('search', { title: nameOfPage + ' | Manga Webiste', mangaSearch: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
     }); 
+}
 
+const sorting = (req, res) => {
+    var nameOfPage; 
+    var mangaSort = []; 
+    var topMonth = [];
+    var topWeek = [];
+    var topDay = [];
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
+        var dbo = database.db(dbName); 
+        var category = req.params.category; 
+        dbo.collection('manga').find({category: category}).toArray(function(err, result) {
+            for (var i = 0; i < result.length; i++) {
+                mangaSort.push(result.slice(i, i+1)); 
+            }
+        })
+        dbo.collection('manga').find({ topMonth: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topMonth.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topWeek: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topWeek.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topDay: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topDay.push(result.slice(i, i + 1));
+            }
+            // console.log(mangaSearch); 
+            res.render('sort', { title: category, mangaSort: mangaSort, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+        })
+    })
 }
 
 module.exports = {
-    searching
+    searching,
+    sorting
 }
