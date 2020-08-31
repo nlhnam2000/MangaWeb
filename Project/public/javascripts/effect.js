@@ -9,8 +9,3 @@ likeButton.addEventListener('click', function() {
         this.classList.add("fa-thumbs-up"); 
     }
 })
-
-// const dataSearch = document.forms['search-form'].querySelector('input'); 
-// dataSearch.addEventListener('keyup', function(data) { 
-    
-// })
