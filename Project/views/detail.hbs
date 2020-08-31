@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>
+        {{#each title}}
+            {{#each this}}
+                {{this.name}}
+            {{/each}}
+        {{/each}}
+    </title>
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-md sticky-top navbar-light">
+        <a href="/" class="navbar-branch" style="margin-right: 30px;">
+            <!-- <h3 class="mb-0 site-logo">LOGO</h3> -->
+            <img src="/images/logo.png" class="logo">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse"
+        data-target="#navbarResponsive">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="/" class="nav-link active">Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Thể loại
+                    </a>
+                    <div class="dropdown-menu">
+                        <ul class="list-unstyled">
+                            <li><a href="/category/Action" class="dropdown-item">Hành động</a></li>
+                            <li><a href="/category/Adventure" class="dropdown-item">Phiêu lưu</a> </li>
+                            <li><a href="/category/Fiction" class="dropdown-item">Viễn tưởng</a></li>
+                            <li><a href="/category/Detective" class="dropdown-item">Trinh thám</a></li>
+                            <li><a href="/category/Drama" class="dropdown-item">Drama</a></li>
+                            <li><a href="/category/Horror" class="dropdown-item">Kinh dị</a></li>
+                            <li><a href="/category/Isekai" class="dropdown-item">Chuyển sinh</a></li>
+                            <li><a href="/category/Shounen" class="dropdown-item">Shounen</a></li>
+                            <li><a href="/category/Comedy" class="dropdown-item">Hài hước</a></li>
+                            <li><a href="/category/SOL" class="dropdown-item">Đời thường</a></li>
+                            <li><a href="/category/Supernatural" class="dropdown-item">Siêu nhiên</a></li>
+                            <li><a href="/category/Romance" class="dropdown-item">Tình cảm</a></li>
+                            <li><a href="/category/Schoollife" class="dropdown-item">Học đường</a></li>
+                            <li><a href="/category/Mecha" class="dropdown-item">Người máy</a></li>
+                            <li><a href="/category/Sci-fi" class="dropdown-item">Sci-fi</a></li>
+                            <li><a href="/category/Sport" class="dropdown-item">Thể thao</a></li>
+                            <li><a href="/category/Psychology" class="dropdown-item">Tâm lý</a></li>
+                            <li><a href="/category/Oneshot" class="dropdown-item">Oneshot</a></li>
+                            <li><a href="/category/Manhwa" class="dropdown-item">Manhwa</a></li>
+                            <li><a href="/category/Manhhua" class="dropdown-item">Manhhua</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="#news" class="nav-link">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#update" class="nav-link">Cập nhật</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#new-manga" class="nav-link">Truyện mới</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Liên hệ</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item">
+                    <form action="/search" method="GET" id="search-form">
+                        <div class="input-group search-width search-section">
+                            <input id="searching" type="text" name="q" placeholder="Tìm truyện..."
+                               class="form-control text nav-link">
+                            <button type="submit" value="Tìm kiếm" class="fa fa-search btn btn-primary">
+                                <!-- <img class="image-search" src="../img/search-icon.png" alt="searchicon" width="50"> -->
+                            </button>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right ml-auto">
+                <li class="nav-item nav-link">
+                    <button class="log-button btn btn-success" data-toggle="modal" data-target="#SignIn">Đăng nhập</button>
+                </li>
+                <li class="nav-item nav-link" style="margin-left: 20px">
+                    <button class="log-button btn btn-success" data-toggle="modal" data-target="#SignUp">Đăng ký</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="header-top" id="cover" style="margin-top: 30px">
+        <nav aria-label="breadcrumb">
+            {{#each mangaDetail}}
+                <ol class="breadcrumb">
+                    {{#each this}}
+                        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{this.name}}</li>
+                    {{/each}}
+                </ol>
+            {{/each}}
+          </nav>
+    </div>
+    <div class="container-fluid manga-box-detail">
+        {{#each mangaDetail}}
+            {{#each this}}
+                <div class="manga-cover">
+                    <img src="/{{this.cover}}" class="cover-img-manga">
+                    <div class="manga-detail">
+                        <img src="/{{this.avatar}}" class="description-img">
+                        <div class="description">
+                            <p class="description-category">{{this.category}}</p>
+                            <h2 class="description-title display-4">{{this.name}}</h2>
+                            <p><strong>Tác giả: </strong>{{this.author}}</p>
+                            <p><strong>Nguồn truyện: </strong>Đang cập nhật </p> <br>
+                            <div class="user-action">
+                                <button class="btn btn-primary"><i id="like-button" class="fa fa-thumbs-up"></i></button>
+                                <a href="#" class="btn btn-light dropdown-toggle share-btn" data-toggle="dropdown">Chia sẻ</a>
+                                <span class="caret"></span>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Facebook</a></li>
+                                    <li><a class="dropdown-item" href="#">Twitter</a></li>
+                                    <li><a class="dropdown-item" href="#">Instagram</a></li>
+                                </ul>
+                                <a href="#" class="btn btn-danger">Báo cáo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="tab-aside container info-nav">
+                    <div class="nav nav-tabs" role="">
+                        <a href="#introduction" class=" nav-item nav-link active" data-toggle="tab" role="tab">Nội dung</a>
+                        <a href="#chapter" class="nav-item nav-link" data-toggle="tab" role="tab">Chapter</a>
+                    </div>
+                </nav>
+                <div class="tab-content container info-nav-content" style="border: none;">
+                    <div class="tab-pane container active" role="tabpanel" id="introduction">
+                        <p><pre><i class="fa fa-eye"> {{this.view}}</i>    <i class="fa fa-thumbs-up"> {{this.like}}</i></pre></p>
+                        <p>
+                            {{this.description}} 
+                        </p>
+                    </div>
+                    <div class="tab-pane container" role="tabpanel" id="chapter">
+                        <ul class="chapter-list list-unstyled">
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 1</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 2</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 3</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 4</a>
+                            </li>
+                            <li class="chapter-item">
+                                <a href="#" class="chapter-link">Chapter 5</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            {{/each}}
+        {{/each}}
+    </div>
+    </div>
+    <main>
+        <div class="container-fluid" id="new-manga">
+            <section class="content">
+                <p class="manga-header">
+                    <i class="fa fa-bars"></i>   Truyện mới phát hành
+                </p>
+                <div class="manga-list">
+                    <div class="row">
+                        {{#each mangaNew}}
+                            <div class="col-sm-6">
+                                {{#each this}}
+                                    <div class="media" style="margin-bottom: 20px">
+                                        <div class="media-left">
+                                            <a href="/manga/{{this._id}}">
+                                                <img src="/{{this.avatar}}" width="100">
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                <a href="/manga/{{this._id}}" class="chart-title"><strong>{{this.name}}</strong></a>
+                                            </h5>
+                                            <div>
+                                                <a href="/manga/{{this._id}}" class="vietsub">{{this.sub}}</a>
+                                            </div>
+                                            <small>
+                                                <i class="fa fa-clock-o"></i>{{this.date}}
+                                            </small>
+                                            <br>
+                                            <div class="rating">
+                                                <img src="/images/rating.png" width="20">
+                                                <img src="/images/rating.png" width="20">
+                                                <img src="/images/rating.png" width="20">
+                                                <img src="/images/rating.png" width="20">
+                                                <img src="/images/rating.png" width="20">
+                                            </div>
+                                            <div class="views">
+                                                <i class="fa fa-eye"></i> {{this.view}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {{/each}}
+                            </div>
+                        {{/each}}
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div class="container-fluid sidebar">
+        <div class="top-views">
+            <h4 class="text-center">Xem nhiều nhất</h4>
+            <nav class="tab-aside">
+                <div class="nav nav-tabs" role="">
+                    <a href="#month" class=" nav-item nav-link active" data-toggle="tab" role="tab">Top tháng</a>
+                    <a href="#week" class="nav-item nav-link" data-toggle="tab" role="tab">Top tuần</a>
+                    <a href="#day" class="nav-item nav-link" data-toggle="tab" role="tab">Top ngày</a>
+                </div>
+            </nav>
+            <div class="tab-content">
+                <div class="tab-pane container-fluid active" id="month" role="tabpanel">
+                    <ul class="list-unstyled">
+                        {{#each topMonth}}
+                            <li>
+                                {{#each this}}
+                                    <img src="/{{this.avatar2}}" alt="">
+                                    <div class="side-info">
+                                        <a href="/manga/{{this._id}}" class="top-title">{{this.name}}</a>
+                                        <p class="views"><span class="fa fa-eye"></span> {{this.view}}</p>
+                                    </div>
+                                {{/each}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="tab-pane container fade" id="week">
+                    <ul class="list-unstyled">
+                        {{#each topWeek}}
+                            <li>
+                                {{#each this}}
+                                    <img src="/{{this.avatar2}}" alt="">
+                                    <div class="side-info">
+                                        <a href="/manga/{{this._id}}" class="top-title">{{this.name}}</a>
+                                        <p class="views"><span class="fa fa-eye"></span> {{this.view}}</p>
+                                    </div>
+                                {{/each}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+                <div class="tab-pane container fade" id="day">
+                    <ul class="list-unstyled">
+                        {{#each topDay}}
+                            <li>
+                                {{#each this}}
+                                    <img src="/{{this.avatar2}}" alt="">
+                                    <div class="side-info">
+                                        <a href="/manga/{{this._id}}" class="top-title">{{this.name}}</a>
+                                        <p class="views"><span class="fa fa-eye"></span> {{this.view}}</p>
+                                    </div>
+                                {{/each}}
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="category">
+            <h4 class="text-center">Thể loại</h4>
+            <div class="category-items">
+                <div class="category-list">
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Action" class="category-item">
+                                <p class="category-item">Hành động <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Adventure" class="category-link">
+                                <p class="category-item">Phiêu lưu <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Fiction" class="category-link">
+                                <p class="category-item">Viễn tưởng <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Detective" class="category-link">
+                                <p class="category-item">Trinh thám <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Drama" class="category-link">
+                                <p class="category-item">Drama <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="category-link">
+                                <p class="category-item">Kinh dị <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Isekai" class="category-link">
+                                <p class="category-item">Chuyển sinh <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Shounen" class="category-link">
+                                <p class="category-item">Shounen <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Comedy" class="category-link">
+                                <p class="category-item">Hài hước <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/SOL" class="category-link">
+                                <p class="category-item">Đời thường <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Supernatural" class="category-link">
+                                <p class="category-item">Siêu nhiên <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Romance" class="category-link">
+                                <p class="category-item">Tình cảm <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Schoollife" class="category-link">
+                                <p class="category-item">Học đường <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Mecha" class="category-link">
+                                <p class="category-item">Người máy <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Sci-fi" class="category-link">
+                                <p class="category-item">Sci-Fi <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Sport" class="category-link">
+                                <p class="category-item">Thể thao <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Oneshot" class="category-link">
+                                <p class="category-item">One Shot <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Psychology" class="category-link">
+                                <p class="category-item">Tâm lý <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row category-row">
+                        <div class="col-6">
+                            <a href="/category/Manhua" class="category-link">
+                                <p class="category-item">Manhhua <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="/category/Manhwa" class="category-link">
+                                <p class="category-item">Manhwa <span class="amount">    (10)</span></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="SignIn">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Đăng nhập</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="form-container">
+                    <div>
+                        <label for="email" style="width: 100%;"><b>Email</b></label>
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
+                    </div>
+                </form> 
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Đăng nhập</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    <div class="modal" id="SignUp">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Đăng kí</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+                <form action="" class="form-container">
+                    <div>
+                        <label for="email" style="width: 100%;"><b>Email</b></label>
+                        <input type="email" name="email-signin-input" id="email" placeholder="Enter email" required style="width: 100%;">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password" style="width: 100%;"><b>Password</b></label>
+                        <input style="width: 100%;" type="password" name="password-sigin-input" id="password" placeholder="Enter password" required>
+                    </div>
+                    <br>
+                    <div>
+                        <label style="width: 100%;" for="password"><b>Password verify</b></label>
+                        <input style="width: 100%;" type="password" name="passwordv-input" id="password" placeholder="Verify password" required>
+                    </div>
+                </form> 
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success">Đăng ký</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    <footer class="page-footer" id="contact">
+        <div class="bg-primary">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-12 text-center"> 
+                        <a href="#"><i class="fab fa-facebook-f text-white mr-4"></i></a>
+                        <a href="#"><i class="fab fa-twitter text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-google-plus-g text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-linkedin-in text-white mr-4"></i></a> 
+                        <a href="#"><i class="fab fa-instagram text-white mr-4"></i></a>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center mt-5">
+            <div class="row">
+                <div class="col-4 mx-auto mb-4">
+                    <div class="text-uppercase font-weight-bold" style="color: rgb(9, 9, 255); margin-bottom: 20px;">Projet</div>
+                    <!-- <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 55px; height: 2px"/> -->
+                    <h5>Manga Site-Web</h5>
+                </div>
+                <div class="col-4 mx-auto mb-4">
+                    <div class="text-uppercase font-weight-bold" style="color: rgb(9, 9, 255); margin-bottom: 20px;">Membres</div>
+                    <!-- <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 98px; height: 2px"/> -->
+                    <ul class="list-unstyled">
+                        <li class="my-2">Nguyễn Thanh Trang - 18126002</li>
+                        <li class="my-2">Trần Quốc Tiến - 18126009</li>
+                        <li class="my-2">Huỳnh Ngọc An - 18126012</li>
+                        <li class="my-2">Trần Bảo Khánh - 18126020</li>
+                        <li class="my-2">Nguyễn Lê Hoàng Nam - 18126026</li>
+                    </ul>
+                </div>
+                <div class="col-4 mx-auto mb-4">
+                    <div class="text-uppercase font-weight-bold" style="color: rgb(9, 9, 255); margin-bottom: 20px;">Contacter</div>
+                    <!-- <hr class="bg-light mb-4 mt-0 d-inline-block mx-auto" style="width: 95px; height: 2px"/> -->
+                    <ul class="list-unstyled">
+                        <li class="my-2"><i class="fas fa-home"></i> 227, Nguyễn Văn Cừ, Q5, HCM</li>
+                        <li class="my-2"><i class="far fa-envelope"></i> l'equipe@student.hcmus.edu.vn</li>
+                        <li class="my-2"><i class="fas fa-phone"></i>+0123456789</li>
+                        <li class="my-2"><i class="fas fa-print"></i>+123456789</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            <p>&copy;Copyright </p>
+            <p>Conçu par l'équipe [....] </p>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+        var categoryStr = document.querySelector('.description-category'); 
+        categoryStr.innerText = categoryStr.innerText.split(',').join(' - '); 
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="/javascripts/effect.js"></script>
+    <script src="/javascripts/function.js"></script>
+</body>
+</html>
