@@ -58,30 +58,37 @@
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item">
+                {{!-- <li class="nav-item">
                     <a href="#news" class="nav-link">Tin tức</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#update" class="nav-link">Cập nhật</a>
+                    <a href="/truyen-moi-cap-nhat" class="nav-link">Cập nhật</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#new-manga" class="nav-link">Truyện mới</a>
-                </li>
+                    <a href="/truyen-moi-phat-hanh" class="nav-link">Truyện mới</a>
+                </li> --}}
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Liên hệ</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right ml-auto">
+            <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item">
                     <form action="/search" method="GET" id="search-form">
                         <div class="input-group search-width search-section">
                             <input id="searching" type="text" name="q" placeholder="Tìm truyện..."
-                               class="form-control text nav-link">
+                               class="form-control text nav-link dropdown" data-toggle="dropdown">
                             <button type="submit" value="Tìm kiếm" class="fa fa-search btn btn-primary">
                                 <!-- <img class="image-search" src="../img/search-icon.png" alt="searchicon" width="50"> -->
                             </button>
                         </div>
                     </form>
+                    {{#each searchResult}}
+                        <ul class="list-unstyled" id="search-result">
+                            {{#each this}}
+                                <li>{{this.name}}</li>
+                            {{/each}}
+                        </ul>
+                    {{/each}}
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
@@ -187,7 +194,7 @@
                             <div class="col-2 clearfix d-none d-md-block">
                                 <a href="/category/Comedy" class="manga-slide-item-box">
                                     <img src="/images/category/comedy.jpg" alt="" width="200px" height="200px">
-                                    <p class="manga-slide-item-text">hài hước</p>
+                                    <p class="manga-slide-item-text">Htài hước</p>
                                 </a>
                             </div>
                             <div class="col-2 clearfix d-none d-md-block">
@@ -755,6 +762,7 @@
         </div>
     </footer>
 
+    <script src="/home.js"></script>
     <script src="/javascripts/function.js"></script>
 </body>
 </html>
