@@ -37,10 +37,10 @@ const homePage = (req, res) => {
             for (var i = 0; i < result.length; i++) {
                 topDay.push(result.slice(i, i + 1));
             }
-            // res.render('index', { title: 'Home Page', mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('index', { title: 'Home Page', mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
 
-        const searchBar = document.forms["search-form"].querySelector('input');
+        /*const searchBar = document.forms["search-form"].querySelector('input');
         searchBar.addEventListener('keyup', function(e) {
             const term = e.target.value.toLowerCase(); 
             dbo.collection('manga').find({}).toArray(function(err, result) {
@@ -53,7 +53,7 @@ const homePage = (req, res) => {
                 }
                 res.render('index', { title: 'Home Page', searchResult: searchResult, mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
             })
-        }) 
+        })*/
     }); 
 }
 
