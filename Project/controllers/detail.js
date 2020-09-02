@@ -14,10 +14,16 @@ const detail = (req, res) => {
     var topMonth = [];
     var topWeek = [];
     var topDay = [];
+    var allManga = [];
     var titlePage;
 
     MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
         var dbo = database.db(dbName); 
+        dbo.collection('manga').find({}).toArray(function(err, result) {
+            for (var i = 0; i < result.length; i++) {
+                allManga.push(result.slice(i, i+1)); 
+            }
+        })
         dbo.collection('manga').find({ _id: ObjectId(id) }).toArray(function(err, result) {
             for (var i = 0; i < result.length; i++) {
                 mangaDetail.push(result.slice(i, i + 1));
@@ -51,13 +57,23 @@ const detail = (req, res) => {
             for (var i = 0; i < result.length; i++) {
                 topDay.push(result.slice(i, i + 1));
             }
-            res.render('detail', { title: titlePage + ' | Manga Website', mangaDetail: mangaDetail, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('detail', { title: titlePage + ' | Manga Website', allManga: allManga, mangaDetail: mangaDetail, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
     })
 }
 
 const category = (req, res) => {
-    res.render('category', {title: 'Thể loại'})
+    var allManga = []; 
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
+        var dbo = database.db(dbName); 
+        dbo.collection('manga').find({}).toArray(function(err, result) {
+            for (var i = 0; i < result.length; i++) {
+                allManga.push(result.slice(i, i+1)); 
+            }
+            res.render('category', {title: 'Thể loại', allManga: allManga})
+        })
+    })
+    
 }
 
 module.exports = {

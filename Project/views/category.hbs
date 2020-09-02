@@ -82,6 +82,21 @@
                             </button>
                         </div>
                     </form>
+                    <div class="tab-pane container" id="search-result">
+                        <ul class="list-unstyled">
+                            {{#each allManga}}
+                                <li>
+                                    {{#each this}}
+                                        <img src="/{{this.avatar2}}" alt="">
+                                        <div class="side-info">
+                                            <a href="/manga/{{this._id}}" class="top-title">{{this.name}}</a>
+                                            <p class="views"><span class="fa fa-eye"></span>{{this.view}}</p>
+                                        </div>
+                                    {{/each}}
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
