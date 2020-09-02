@@ -9,6 +9,8 @@ const homePage = (req, res) => {
     var topMonth = [];
     var topWeek = [];
     var topDay = [];
+    var searchResult = []; 
+
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, database) {
         var dbo = database.db(dbName);  
         dbo.collection('manga').find({ isUpdate: true }).toArray(function (err, result) {
@@ -37,6 +39,21 @@ const homePage = (req, res) => {
             }
             res.render('index', { title: 'Home Page', mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
+
+        /*const searchBar = document.forms["search-form"].querySelector('input');
+        searchBar.addEventListener('keyup', function(e) {
+            const term = e.target.value.toLowerCase(); 
+            dbo.collection('manga').find({}).toArray(function(err, result) {
+                if (err) throw err; 
+                for (var i = 0; i < result.length; i++) {
+                    var manga_name = result[i].name.toLowerCase();
+                    if (manga_name.indexOf(term) !== -1) {
+                        searchResult.push(resul.slice(i, i+1)); 
+                    }
+                }
+                res.render('index', { title: 'Home Page', searchResult: searchResult, mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            })
+        })*/
     }); 
 }
 
