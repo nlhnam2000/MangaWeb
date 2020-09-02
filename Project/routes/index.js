@@ -14,7 +14,5 @@ router.get('/category', ctrlDetail.category);
 
 router.get('/search', ctrlSearch.searching); 
 router.get('/category/:category', ctrlSearch.sorting); 
-router.get('/Truyen-moi-cap-nhat', ctrlSearch.sortUpdatedManga); 
-router.get('/Truyen-moi-phat-hanh', ctrlSearch.sortNewManga); 
 
 module.exports = router;
