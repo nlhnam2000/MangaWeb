@@ -519,4 +519,31 @@
     "like": 12454,
     "author": "Takeoka Hazuki - Yuki Shinichi",
     "description": "Spin off của Masamune-kun no Revenge, theo dõi những biến cố kì lạ xảy ra với Masamune mỗi buổi sáng đến trường và hậu quả đi kèm xảy đến với thanh niên này"
+}, {
+    "_id": {
+        "$oid": "5f44ff8a0e16e94ab92b16c9"
+    },
+    "name": "Sousei no Onmyouji",
+    "sub": "Song tinh âm dương sư",
+    "date": "13/08/2020",
+    "rate": 5,
+    "view": 34235,
+    "isUpdate": false,
+    "isNew": true,
+    "topMonth": false,
+    "topWeek": false,
+    "topDay": true,
+    "category": [
+        "Action",
+        "\bMagic",
+        "Romance",
+        "\bFiction",
+        "Comedy"
+    ],
+    "cover": "images/cover/souseic.png",
+    "avatar": "images/newmanga/onmyouji.jpg",
+    "avatar2": "images/topday/onmyouji.jpg",
+    "like": 23325,
+    "author": "Sukeno Yoshiaki",
+    "description": "Câu chuyện về 2 đứa trẻ Rokuro và Benio với cuộc sống của những pháp sư trừ tà..."
 }]
