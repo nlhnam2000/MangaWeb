@@ -1,4 +1,4 @@
-var MongoClient = require('mongodb').MongoClient; 
+var MongoClient = require('mongodb').MongoClient;
 //var url = 'mongodb+srv://hoangnam:khongbiet@webproject.s6fki.mongodb.net/manga_web?retryWrites=true&w=majority'; 
 var url = 'mongodb://localhost:27017/';
 var dbName = 'manga_web';
@@ -8,7 +8,7 @@ function createNode(element) {
 }
 
 function append(parent, el) {
-  return parent.appendChild(el);
+    return parent.appendChild(el);
 }
 
 const searchBar = document.forms["search-form"].querySelector('input');
@@ -22,7 +22,7 @@ const searchBar = document.forms["search-form"].querySelector('input');
 //         if (li[i] == '') {
 //             // ul.style.backgroundColor = '#204051'; 
 //             ul.style.display = 'none'; 
-            
+
 //         } else {
 //             ul.style.display = 'block'; 
 //         }
@@ -31,30 +31,15 @@ const searchBar = document.forms["search-form"].querySelector('input');
 
 searchBar.addEventListener('keyup', function(e) {
     var ul = document.getElementById("search-result");
-    const term = e.target.value.toLowerCase(); 
+    const term = e.target.value.toLowerCase();
     MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, database) {
-        var dbo = database.db(dbName); 
+        var dbo = database.db(dbName);
         dbo.collection('manga').find({}).toArray(function(err, result) {
             for (var i = 0; i < result.length; i++) {
                 var manga_name = result[i].name.toLowerCase();
-                // if (manga_name.indexOf(term) !== -1) {
-                //     ul.style.display = 'block'; 
-                //     for (item of result[i]) {
-                //         let img = createNode('li');  
-                //         let p = createNode('p');
-                //         let div = createNode('div'); 
-                //         let li = createNode('li'); 
-                //         img.src = item.avatar2; 
-                //         p.innerHTML = item.name; 
-                //         append(div, img); 
-                //         append(div, p);
-                //         append(li, div); 
-                //         append(ul, li); 
-                //     }
-                // }
-                console.log(term); 
+                
+                console.log(term);
             }
         })
     })
 })
-
