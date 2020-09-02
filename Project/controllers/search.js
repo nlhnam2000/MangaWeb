@@ -86,7 +86,73 @@ const sorting = (req, res) => {
     })
 }
 
+const sortUpdatedManga = (req, res) => {
+    var sortUpdate = []; 
+    var topMonth = [];
+    var topWeek = [];
+    var topDay = [];
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, (err, database) => {
+        var dbo = database.db(dbName); 
+        dbo.collection('manga').find({isUpdate: true}).toArray((err, result) => {
+            for (var i = 0; i < result.length; i++) {
+                sortUpdate.push(result.slice(i, i+1)); 
+            }
+        })
+        dbo.collection('manga').find({ topMonth: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topMonth.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topWeek: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topWeek.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topDay: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topDay.push(result.slice(i, i + 1));
+            }
+            // console.log(mangaSearch); 
+            res.render('sort', { title: 'Truyện mới cập nhật', mangaSort: sortUpdate, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+        })
+    })
+}
+
+const sortNewManga = (req, res) => {
+    var sortNew = []; 
+    var topMonth = [];
+    var topWeek = [];
+    var topDay = [];
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, (err, database) => {
+        var dbo = database.db(dbName); 
+        dbo.collection('manga').find({isNew: true}).toArray((err, result) => {
+            for (var i = 0; i < result.length; i++) {
+                sortNew.push(result.slice(i, i+1)); 
+            }
+        })
+        dbo.collection('manga').find({ topMonth: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topMonth.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topWeek: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topWeek.push(result.slice(i, i + 1));
+            }
+        })  
+        dbo.collection('manga').find({ topDay: true }).toArray(function (err, result) {
+            for (var i = 0; i < result.length; i++) {
+                topDay.push(result.slice(i, i + 1));
+            }
+            // console.log(mangaSearch); 
+            res.render('sort', { title: 'Truyện mới phát hành', mangaSort: sortNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+        })
+    })
+}
+
 module.exports = {
     searching,
-    sorting
+    sorting, 
+    sortUpdatedManga,
+    sortNewManga
 }
