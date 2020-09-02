@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
     <title>{{title}}</title>
 </head>
 <body class="bg-light">
@@ -82,13 +83,21 @@
                             </button>
                         </div>
                     </form>
-                    {{#each searchResult}}
-                        <ul class="list-unstyled" id="search-result">
-                            {{#each this}}
-                                <li>{{this.name}}</li>
+                    <div class="tab-pane container" id="search-result">
+                        <ul class="list-unstyled">
+                            {{#each allManga}}
+                                <li>
+                                    {{#each this}}
+                                        <img src="/{{this.avatar2}}" alt="">
+                                        <div class="side-info">
+                                            <a href="/manga/{{this._id}}" class="top-title">{{this.name}}</a>
+                                            <p class="views"><span class="fa fa-eye"></span>{{this.view}}</p>
+                                        </div>
+                                    {{/each}}
+                                </li>
                             {{/each}}
                         </ul>
-                    {{/each}}
+                    </div>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right ml-auto">
@@ -772,7 +781,7 @@
         </div>
     </footer>
 
-    <script src="/home.js"></script>
+    {{!-- <script src="/home.js"></script> --}}
     <script src="/javascripts/function.js"></script>
 </body>
 </html>

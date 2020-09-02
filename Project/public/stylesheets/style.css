@@ -6,7 +6,7 @@ html {
 
 body {
     font-family: "Open Sans", sans-serif;
-    color: black; 
+    /* color: black;  */
     /* background-color: rgb(59, 58, 58); */
     /* background-color: white !important; */
     position: relative;
@@ -619,8 +619,30 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     left: 34.5%;
 }
 
-/* #search-result li {
-    position: absolute;
+#search-result li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#search-result li img {
+    /* position: absolute;
     top: 5%;
-    right: 10%;
-} */
+    right: 10%; */
+    width: 30%;
+
+}
+
+#search-result ul li {
+    line-height: 3rem;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+#search-result ul li a {
+    color: black !important;
+}
+
+#search-result ul li div {
+    margin-left: 10px;
+}
