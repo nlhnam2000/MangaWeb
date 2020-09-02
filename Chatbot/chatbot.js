@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
     inputField.addEventListener("keydown", function(e) {
         if (e.code === "Enter") {
             let input = inputField.value;
-            console.log(`I typed '${input}'`)
             inputField.value = "";
             output(input);
     }

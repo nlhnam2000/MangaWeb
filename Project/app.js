@@ -22,6 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+ 
+var favicon = require('serve-favicon');
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
