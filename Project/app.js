@@ -23,8 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
  
+//note: npm install serve-favicon
+//note2: step by step: close browser - npm start - re-open browser - access default port of express (localhost:3000)  
 var favicon = require('serve-favicon');
-
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.use('/', indexRouter);

@@ -12,9 +12,10 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <title>Thể loại</title>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.ico"/>
+    <title>{{title}}</title>
 </head>
-<body>
+<body class="bg-dark">
     <nav class="navbar navbar-expand-md sticky-top navbar-light">
         <a href="/" class="navbar-branch" style="margin-right: 30px;">
             <!-- <h3 class="mb-0 site-logo">LOGO</h3> -->
@@ -71,12 +72,12 @@
                     <a href="#contact" class="nav-link">Liên hệ</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right ml-auto">
+            <ul class="nav navbar-nav mr-auto">
                 <li class="nav-item">
                     <form action="/search" method="GET" id="search-form">
                         <div class="input-group search-width search-section">
                             <input id="searching" type="text" name="q" placeholder="Tìm truyện..."
-                               class="form-control text nav-link">
+                               class="form-control text nav-link dropdown" data-toggle="dropdown">
                             <button type="submit" value="Tìm kiếm" class="fa fa-search btn btn-primary">
                                 <!-- <img class="image-search" src="../img/search-icon.png" alt="searchicon" width="50"> -->
                             </button>
@@ -108,155 +109,34 @@
                 </li>
             </ul>
         </div>
-    </nav>
-    <div class="header-top" id="cover" style="margin-top: 30px">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="/"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true" style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
-              <li class="breadcrumb-item active" aria-current="page">Tất cả thể loại</li>
-            </ol>
-          </nav>
-    </div>
-    <div class="category-list container-fluid justify-content-center">
-        <ul>
-            <li>
-                <a href="/category/Action" class="category-box">
-                    <img src="/images/category/action.png" alt="">
-                    <p class="category-text">Hành động</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Adventure" class="category-box">
-                    <img src="./images/category/adventure.jpeg" alt="">
-                    <p class="category-text">Phiêu lưu</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Comedy" class="category-box">
-                    <img src="/images/category/comedy2.jpg" alt="">
-                    <p class="category-text">Hài hước</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Detective" class="category-box">
-                    <img src="/images/category/detective.jpg" alt="">
-                    <p class="category-text">Trinh thám</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Drama" class="category-box">
-                    <img src="/images/category/drama.jpg" alt="">
-                    <p class="category-text">Drama</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Fiction" class="category-box">
-                    <img src="/images/category/fiction.jpg" alt="">
-                    <p class="category-text">Viễn tưởng</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Horror" class="category-box">
-                    <img src="/images/category/horror.png" alt="">
-                    <p class="category-text">Kinh dị</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Isekai" class="category-box">
-                    <img src="/images/category/isekai.png" alt="">
-                    <p class="category-text">Xuyên không</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Manhua" class="category-box">
-                    <img src="/images/category/manhua.jpeg" alt="">
-                    <p class="category-text">Manhua</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Manhwa" class="category-box">
-                    <img src="/images/category/manhwa.jpeg" alt="">
-                    <p class="category-text">Manhwa</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Mecha" class="category-box">
-                    <img src="/images/category/mecha.jpg" alt="">
-                    <p class="category-text">Người máy</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Oneshot" class="category-box">
-                    <img src="/images/category/oneshot.jpg" alt="">
-                    <p class="category-text">OneShot</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Psychology" class="category-box">
-                    <img src="/images/category/psycho.png" alt="">
-                    <p class="category-text">Tâm lý</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Romance" class="category-box">
-                    <img src="/images/category/romance.jpg" alt="">
-                    <p class="category-text">Tình cảm</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Schoollife" class="category-box">
-                    <img src="/images/category/schoollife.jpg" alt="">
-                    <p class="category-text">Học đường</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Sci-fi" class="category-box">
-                    <img src="/images/category/scifi.jpg" alt="">
-                    <p class="category-text">Sci-Fi</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Shounen" class="category-box">
-                    <img src="/images/category/shounen.jpg" alt="">
-                    <p class="category-text">Shounen</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/SOL" class="category-box">
-                    <img src="/images/category/SOL.jpg" alt="">
-                    <p class="category-text">Đời thường</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Sport" class="category-box">
-                    <img src="/images/category/sport.jpg" alt="">
-                    <p class="category-text">Thể thao</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Supernatural" class="category-box">
-                    <img src="/images/category/SN.png" alt="">
-                    <p class="category-text">Siêu nhiên</p>
-                </a>
-            </li>
-            <li>
-                <a href="/category/Mystery" class="category-box">
-                    <img src="/images/category/mystery.jpg" alt="">
-                    <p class="category-text">Mystery</p>
-                </a>
-            </li>
+        </nav>
+        <div class="header-top" id="cover" style="margin-top: 30px">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    {{#each mangaDetail}}
+                        <li class="breadcrumb-item"><a href="/"><i class="fa fa-home rounded-circle bg-dark" aria-hidden="true"
+                                    style="padding: 5px; padding-left: 7px; padding-right: 7px; color: white;"></i></a></li>
+                        <li class="breadcrumb-item">
+                            {{#each this}}
+                                <a href="/manga/{{this._id}}">{{this.name}}</a>
+                            {{/each}}
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Chapter 1</li>
+                    {{/each}}
+                </ol>
+            </nav>
+        </div>
+        <div class="chapter-slide container-fluid justify-content-center">
+            <ul class="list-unstyled">
+                {{#each mangaChapter}}
+                <li>
+                    {{#each this}}
+                    <img src="/{{this}}" alt="">
+                    {{/each}}
+                </li>
+            {{/each}}
         </ul>
     </div>
-    <!-- <script type="text/javascript">
-        $(document).ready(function() {
-            $(".category-box").mouseover(function() {
-                $('.category-text').fadeOut(); 
-            })
-            $(".category-box").mouseup(function() {
-                $('.category-text').fadeIn(); 
-            })
-        })
-    </script> -->
     <div class="modal" id="SignIn">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -379,18 +259,6 @@
             <p>Conçu par l'équipe [....] </p>
         </div>
     </footer>
-    <script type="text/javascript"> 
-        var category = document.querySelectorAll('.category-list ul li'); 
-        document.querySelectorAll('.category-box img').forEach(image => {
-            image.addEventListener('mouseover', () => {
-                image.style.filter = 'brightness(20%)'; 
-            })
-            image.addEventListener('mouseout', () => {
-                image.style.filter = 'brightness(70%)'; 
-            })
-        })
-        
-    </script>
     <script src="/javascripts/effect.js"></script>
     <script src="/javascripts/function.js"></script>
 </body>

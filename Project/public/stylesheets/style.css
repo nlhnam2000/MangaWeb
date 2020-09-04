@@ -561,7 +561,7 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 /*************************/
 /*  Tất cả các thể loại */ 
 
-.category-list {
+.category-list, .chapter-slide {
     grid-area: slide;
 }
 
@@ -595,7 +595,7 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 }
 
 .category-box img {
-    filter: brightness(50%);
+    filter: brightness(70%);
     border-radius: 25px;
     width: 150px;
 }
@@ -617,6 +617,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     position: absolute;
     top: 69.5%;
     left: 34.5%;
+    height: 400px; 
+    overflow-y: scroll;
 }
 
 #search-result li {
@@ -645,4 +647,15 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 
 #search-result ul li div {
     margin-left: 10px;
+}
+
+/* Chapter page */ 
+.chapter-slide ul {
+    display: table;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.chapter-slide ul li {
+    margin-bottom: 20px;
 }
