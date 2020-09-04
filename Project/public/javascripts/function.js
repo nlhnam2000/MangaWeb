@@ -5,9 +5,7 @@ searchBar.addEventListener('keyup', function(e) {
     var div = document.getElementById('search-result'); 
     var li = div.getElementsByTagName('li'); 
     var a = document.querySelectorAll('#search-result ul li a'); 
-    // if (term == 'undefined') {
-    //     div.style.display = 'none'; 
-    // }
+
     for (var i = 0; i < a.length; i++) {
         text = a[i].innerText; 
         if (term == '') {
@@ -22,4 +20,3 @@ searchBar.addEventListener('keyup', function(e) {
         }
     }
 })
-

@@ -15,11 +15,13 @@ MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, func
     //     if (doc != null) 
     //         console.log(doc) 
     // });
-    dbo.collection('manga').find({category: "Action"}).toArray(function(err, result) {
+    dbo.collection('manga').find({_id: ObjectId("5f42071c118ad61d5faa38f5")}).toArray(function(err, result) {
         for (var i = 0; i < result.length; i++) {
-            Mangas.push(result.slice(i, i+1)); 
+            for (var j = 0; j < result[i].chapter.length; j++) {
+                Mangas.push(result[i].chapter.slice(j, j+1)); 
+            } 
         }
-        console.log(Mangas);
+        console.log(Mangas);    
     })
 }); 
 

@@ -3,7 +3,8 @@ var router = express.Router();
 // var Mangas = require('../mongo'); 
 var ctrlHome = require('../controllers/home'); 
 var ctrlDetail = require('../controllers/detail'); 
-var ctrlSearch = require('../controllers/search')
+var ctrlSearch = require('../controllers/search'); 
+var ctrlChapter = require('../controllers/chapter'); 
 
 /* GET home page. */
 router.get('/', ctrlHome.homePage);
@@ -14,5 +15,7 @@ router.get('/category', ctrlDetail.category);
 
 router.get('/search', ctrlSearch.searching); 
 router.get('/category/:category', ctrlSearch.sorting); 
+
+router.get('/manga/:id/chapter', ctrlChapter.chapter); 
 
 module.exports = router;
