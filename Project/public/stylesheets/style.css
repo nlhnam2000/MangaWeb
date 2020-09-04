@@ -659,3 +659,7 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 .chapter-slide ul li {
     margin-bottom: 20px;
 }
+
+.chapter-slide ul li img {
+    max-width: 900px;
+}
