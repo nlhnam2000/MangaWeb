@@ -31,11 +31,12 @@ body {
 
 .header-top {
     grid-area: cover;
+    padding-bottom: 2em;
 }
 
 .header-top img {
-    width: 1440px;
-    height: 650px;
+    width: 100%;
+    height: 600px;
     object-fit: cover;
 }
 
@@ -89,7 +90,7 @@ li.nav-item.dropdown .dropdown-menu.show ul {
 li.nav-item.dropdown .dropdown-menu.show ul li a{
     width: 150px;
     margin-bottom: 5px;
-    color: black !important;
+    color: #204051 !important;
 }
 
 
