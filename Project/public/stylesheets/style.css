@@ -36,7 +36,7 @@ body {
 
 .header-top img {
     width: 100%;
-    height: 600px;
+    height: 550px;
     object-fit: cover;
 }
 
@@ -45,9 +45,8 @@ nav {
 }
 
 nav .logo {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+    height: 70px;
+    object-fit: contain;
 }
 
 main {
@@ -90,13 +89,14 @@ li.nav-item.dropdown .dropdown-menu.show ul {
 li.nav-item.dropdown .dropdown-menu.show ul li a{
     width: 150px;
     margin-bottom: 5px;
-    color: #204051 !important;
+    color: black !important;
 }
 
 
 li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
-    background-color: rgb(20, 41, 54) !important;
+    background-color: #204051 !important;
     color: white !important;
+    border-radius: 2em;
 }
 
 #search-form input[type=text] {
@@ -109,7 +109,7 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
 
 #search-form {
     width: 600px;
-    margin-left: 20px;
+    margin-left: 198px;
 }
 
 #search-form button {
