@@ -62,7 +62,25 @@
   "cover": "images/cover/narutoc.jpg",
   "avatar": "images/narutov.jpg",
   "avatar2": "images/naruto.jpg",
-  "description": "Naruto là một cậu bé có mơ ước trở thành hokage của làng Konoha,được Hokage phong ấn trong người một trong 9 quái vật của thể giới : Cửu vĩ Hồ ly. Vì cho cậu là một con quái vật, ko ai dám chơi với cậu!& Vì muốn được thừa nhận nên rất phá phách.Khi tốt nghiệp trướng ninja, lần đầu tiên cậu đã được thừa nhận và có một người bạn thân là Sasuke"
+  "description": "Naruto là một cậu bé có mơ ước trở thành hokage của làng Konoha,được Hokage phong ấn trong người một trong 9 quái vật của thể giới : Cửu vĩ Hồ ly. Vì cho cậu là một con quái vật, ko ai dám chơi với cậu!& Vì muốn được thừa nhận nên rất phá phách.Khi tốt nghiệp trướng ninja, lần đầu tiên cậu đã được thừa nhận và có một người bạn thân là Sasuke",
+  "chapter": [
+    "images/Chapters/naruto/chap1/p1.jpg",
+    "images/Chapters/naruto/chap1/p2.jpg",
+    "images/Chapters/naruto/chap1/p3.jpg",
+    "images/Chapters/naruto/chap1/p4.jpg",
+    "images/Chapters/naruto/chap1/p5.jpg",
+    "images/Chapters/naruto/chap1/p6.jpg",
+    "images/Chapters/naruto/chap1/p7.jpg",
+    "images/Chapters/naruto/chap1/p8.jpg",
+    "images/Chapters/naruto/chap1/p9.jpg",
+    "images/Chapters/naruto/chap1/p10.jpg",
+    "images/Chapters/naruto/chap1/p11.jpg",
+    "images/Chapters/naruto/chap1/p12.jpg",
+    "images/Chapters/naruto/chap1/p13.jpg",
+    "images/Chapters/naruto/chap1/p14.jpg",
+    "images/Chapters/naruto/chap1/p15.jpg",
+    "images/Chapters/naruto/chap1/p16.jpg"
+  ]
 },{
   "_id": {
     "$oid": "5f43d87f0e16e94ab92b16b6"
