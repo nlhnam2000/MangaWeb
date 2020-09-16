@@ -11,6 +11,7 @@ router.get('/', ctrlHome.homePage);
 
 /* GET detail page */
 router.get('/manga/:id', ctrlDetail.detail); 
+router.post('/manga/:id', ctrlDetail.comment); 
 router.get('/category', ctrlDetail.category); 
 
 router.get('/search', ctrlSearch.searching); 

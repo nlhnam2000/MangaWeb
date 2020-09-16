@@ -109,7 +109,7 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
 
 #search-form {
     width: 600px;
-    margin-left: 198px;
+    /* margin-left: 198px; */
 }
 
 #search-form button {
@@ -433,6 +433,7 @@ table {
 footer {
     grid-area: footer;
     background-color: #204051 !important;
+    position: relative;
 }
 
 footer h5, footer ul li {
@@ -618,7 +619,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     position: absolute;
     top: 69.5%;
     left: 34.5%;
-    height: 400px; 
+    height: auto;
+    max-height: 400px; 
     overflow-y: scroll;
 }
 
@@ -663,4 +665,170 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 
 .chapter-slide ul li img {
     max-width: 900px;
+}
+
+/* comment form */ 
+#comment li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px; 
+}
+
+#comment-form {
+    padding: 20px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    width: 900px;
+    border-top: 1px solid rgba(71, 71, 71, 0.2);
+}
+
+#comment-form label {
+    font-weight: bold;
+}
+
+#comment-form textarea {
+    width: 750px;
+    margin-bottom: 10px;
+}
+
+#comment-form input, #comment-form textarea {
+    padding: 10px;
+    border-radius: 15px;
+    font-size: smaller;
+}
+
+#comment-form input:focus, #comment-form textarea:focus {
+    outline: none;
+}
+
+#comment-form button {
+    position: absolute;
+    right: 35%;
+}
+
+#username-input {
+    height: 35px;
+    width: 300px;
+    border: 1px solid black;
+    /* margin-left: 10px; */
+    margin-bottom: 15px;
+}
+
+.comment-section {
+    /* background-color: #84a9ac; */
+    width: 700px;
+    margin-left: 20px;
+}
+
+.user-avatar {
+    /* width: 100px;
+    height: 120px; */
+    width: 5%;
+    height: 5%;
+}
+
+.username-box {
+    font-weight: bolder;
+}
+
+.time {
+    font-size: 13px;
+    color: gray;
+}
+
+/* chat bot */ 
+.chatbot-section {
+    position: sticky;
+    top: 0;
+    /* margin-right: 20px;
+    margin-bottom: 20px; */
+    z-index: 9999;
+    /* background-color: white; */
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.chatbot-section:hover {
+    cursor: pointer;
+}
+
+.chatbot-section img {
+    width: 80px;
+    height: 80px;
+}
+
+.chatbox {
+    padding: 10px;
+    max-height: 350px;
+    height: auto;
+    overflow-y: scroll;
+    width: 350px;
+    box-sizing: border-box;
+}
+
+#chatting {
+    height: 290px;
+    position: relative;
+}
+
+.empty-box {
+    position: absolute;
+    top: 30%; 
+    left: 37%;
+    opacity: 0.8;
+}
+
+.empty-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.empty-box h4 {
+    color: gray;
+}
+
+.user, .bot {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.user {
+    float: right;
+    width: 100%;
+}
+
+.bot {
+    float: left;
+    width: 100%;
+}
+
+.bot-response { 
+    background-color: skyblue;
+    border: 1px solid none;
+    border-radius: 1em;
+    padding: 3px 12px 3px 12px;
+    /* word-wrap: break-word; */
+    /* float: left; */
+}
+.user-response {
+    background-color: burlywood;
+    border: 1px solid none;
+    border-radius: 1em;
+    padding: 3px 12px 3px 12px;
+    max-width: 150px;
+    float: right;
+    word-wrap: break-word;
+    overflow: hidden;
+} 
+
+#input { 
+    border: 0; 
+    padding: 5px; 
+    border: 1px solid #421;
+    width: 100%; 
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 1em;
+    outline: none;
 }

@@ -42,8 +42,9 @@ const homePage = (req, res) => {
             for (var i = 0; i < result.length; i++) {
                 topDay.push(result.slice(i, i + 1));
             }
-            res.render('index', { title: 'Home Page', allManga: allManga, mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('index', { title: 'Manga Website', allManga: allManga, mangaUpdated: mangaUpdated, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
+
     }); 
 }
 

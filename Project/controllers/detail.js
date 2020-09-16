@@ -1,3 +1,5 @@
+const { response } = require('../app');
+
 // const { ResumeToken } = require('mongodb');
 var MongoClient = require('mongodb').MongoClient; 
 //var url = 'mongodb+srv://hoangnam:khongbiet@webproject.s6fki.mongodb.net/manga_web?retryWrites=true&w=majority'; 
@@ -28,7 +30,7 @@ const detail = (req, res) => {
             for (var i = 0; i < result.length; i++) {
                 mangaDetail.push(result.slice(i, i + 1));
             }
-            console.log(mangaDetail);
+            // console.log(mangaDetail);
         })
         // get the title for each manga
         var cursor = dbo.collection('manga').find({_id: ObjectId(id)}); 
@@ -76,7 +78,25 @@ const category = (req, res) => {
     
 }
 
+const comment = (req, res) => {
+    var id = req.params.id; 
+    MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
+        var dbo = database.db(dbName); 
+        dbo.collection('manga').update({_id: ObjectId(id)}, {$push: {
+            comments: {
+                username: req.body.username,
+                comment: req.body.comment,
+                date: new Date()
+            }
+        }}), function(err) {
+            if (err) throw err;
+        }
+        res.redirect('/manga/'+id);  // reload the page to see the new comments
+    })
+}
+
 module.exports = {
     detail,
-    category
+    category, 
+    comment
 }
