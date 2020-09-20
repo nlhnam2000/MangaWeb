@@ -224,8 +224,13 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
 
 .top-views, .category {
     margin-bottom: 50px;
-    background-color: #84a9ac;
+    /* background-color: #84a9ac; */
     border-radius: 24px;
+}
+
+
+.tab-aside, .tab-content {
+    background-color: #84a9ac;
 }
 
 /* .top-views ul {
@@ -281,9 +286,13 @@ p.category-item {
     border: 1px solid gray;
 }
 
+.category-items {
+    background-color: #84a9ac;
+}
+
 .amount {
     font-size: smaller;
-    color: gray;
+    color: white;
 ;
 }
 
@@ -321,7 +330,7 @@ p.views {
     border-radius: 24px 24px 0 0;
     width: 50%;
     margin-top: auto;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     text-transform: uppercase;
     font-size: 120%;
     font-weight: bold;
@@ -482,6 +491,7 @@ img.cover-img-manga {
 
 .info-nav {
     font-size: x-large;
+    background-color: white;
 }
 
 .info-nav-content {
@@ -665,6 +675,7 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 
 .chapter-slide ul li img {
     max-width: 900px;
+    min-width: 500px;
 }
 
 /* comment form */ 
