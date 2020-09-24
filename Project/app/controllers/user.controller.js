@@ -1,5 +1,5 @@
 exports.allAccess = (req, res) => {
-  res.status(200).send("Public Content.");
+  res.redirect('http://localhost:3000')
 };
 
 exports.userBoard = (req, res) => {
