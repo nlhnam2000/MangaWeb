@@ -753,7 +753,7 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     position: fixed;
     z-index: 9999;
     display: inline-flexbox;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 3em;
     border: solid 1px #204051;
 }
@@ -763,8 +763,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 }
 
 .chatbot-section img {
-    width: 90px;
-    height: 80px;
+    width: 75px;
+    height: 70px;
 }
 
 .chatbox {
