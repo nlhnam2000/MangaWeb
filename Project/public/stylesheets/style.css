@@ -214,11 +214,10 @@ li.nav-item.dropdown .dropdown-menu.show ul li a:hover {
 
 .sidebar {
     grid-area: sidebar;
-    padding: 15px;
-    margin: 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: none;
     
 }
 

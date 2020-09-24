@@ -1,5 +1,8 @@
 
 const inputField = document.getElementById("input")
+welcome();
+note();
+
 inputField.addEventListener("keydown", function (e) {
   if (e.code === "Enter") {
     // var emptyBox = document.querySelector('div.empty-box'); 
@@ -58,15 +61,47 @@ const reply = [
   //7
   ["Goodbye", "See you later"],
   //8
- 
 ];
 
-const alternative = [
-    "Same",
+const robot = [
+  "How do you do, fellow human",
+  "I am not a robot",
+  "You are a robot, not me（￣へ￣）"
+];
+
+const miss = [
+    "Hm...",
+    "Bro...",
     "Go on...",
     "Try again",
     "I'm listening...",
-    "Bro..."
+    "I don't understand...",
+    "What are you saying?"
+];
+
+const hot = [
+  "One Piece",
+  "Naruto Shippuden",
+  "Tokyo Ghoul",
+  "Doraemon",
+  "Kimetsu No Yaiba",
+  "Sword Art Online"
+];
+const newest = [
+  "One Piece",
+  "Naruto Shippuden",
+  "Tokyo Ghoul",
+  "Doraemon",
+  "Kimetsu No Yaiba",
+  "Sword Art Online"
+];
+const update = [
+  "One Piece - chapter 999",
+  "Naruto Shippuden - chapter 999",
+  "Tokyo Ghoul - chapter 999",
+  "Doraemon - chapter 999",
+  "Kimetsu No Yaiba - chapter 999",
+  "Sword Art Online - chapter 999"
 ];
 
 function compare(triggerArray, replyArray, text) {
@@ -80,37 +115,34 @@ function compare(triggerArray, replyArray, text) {
     }
   }
   return item;
-}
+} 
 
 function output(input) {
   let product;
   let text = input.toLowerCase().replace(/[^\w\s\d]/gi, "");
-  text = text
-    .replace(/ a /g, " ")
-    .replace(/i feel /g, "")
-    .replace(/whats/g, "what is")
-    .replace(/please /g, "")
-    .replace(/ please/g, "");
-
-//compare arrays
-//then search keyword
-//then random alternative
 
   if (compare(trigger, reply, text)) {
     product = compare(trigger, reply, text);
   } else if (text.match(/robot/gi)) {
     product = robot[Math.floor(Math.random() * robot.length)];
+  } else if (text.match(/hot/gi)) {
+    product = "One of the hottest: " + hot[Math.floor(Math.random() * hot.length)];
+  } else if (text.match(/new/gi)) {
+    product = "One of the newest: " + newest[Math.floor(Math.random() * newest.length)];
+  } else if (text.match(/update/gi)) {
+    product = "Updated: " + newest[Math.floor(Math.random() * update.length)];
   } else {
-    product = alternative[Math.floor(Math.random() * alternative.length)];
+    product = miss[Math.floor(Math.random() * miss.length)];
   }
 
   //update DOM
+
   addChat(input, product);
 }
-const robot = ["How do you do, fellow human", "I am not a bot"];
 
 function addChat(input, product) {
   const chatting = document.getElementById("chatting");
+
   let userDiv = document.createElement("div");
   userDiv.className = "user";
   userDiv.innerHTML = ` <span class="user-response">${input}</span> `;
@@ -120,16 +152,24 @@ function addChat(input, product) {
   botDiv.className = "bot";
   botDiv.innerHTML = ` <span class="bot-response">${product}</span>`;
   chatting.appendChild(botDiv);
-  // speak(product);
 }
-function speak(string) {
-  const u = new SpeechSynthesisUtterance();
-  allVoices = speechSynthesis.getVoices();
-  u.voice = allVoices.filter(voice => voice.name === "Alex")[0];
-  u.text = string;
-  u.lang = "en-US";
-  u.volume = 1; //0-1 interval
-  u.rate = 1;
-  u.pitch = 1; //0-2 interval
-  speechSynthesis.speak(u);
+
+
+function welcome(){
+  const chatting = document.getElementById("chatting");
+
+  let botDiv = document.createElement("div");
+  botDiv.className = "bot";
+  botDiv.innerHTML = ` <span class="bot-response">❀ Welcome to the World of Moonlight ❀</span>`;
+  chatting.appendChild(botDiv);
 }
+
+function note(){
+  const chatting = document.getElementById("chatting");
+
+  let botDiv = document.createElement("div");
+  botDiv.className = "bot";
+  botDiv.innerHTML = ` <span class="bot-response">>> Note: Just use English.</span>`;
+  chatting.appendChild(botDiv);
+}
+
