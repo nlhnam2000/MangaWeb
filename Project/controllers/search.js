@@ -53,7 +53,7 @@ const searching = (req, res) => {
                 topDay.push(result.slice(i, i + 1));
             }
             // console.log(mangaSearch); 
-            res.render('search', { title: nameOfPage + ' | Manga Webiste', allManga: allManga, mangaSearch: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
+            res.render('detail', { title: nameOfPage + ' | Manga Webiste', allManga: allManga, mangaDetail: mangaSearch, mangaNew: mangaNew, topMonth: topMonth, topWeek: topWeek, topDay: topDay });
         })
     }); 
 }
