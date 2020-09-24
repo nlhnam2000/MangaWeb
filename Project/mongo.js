@@ -1,9 +1,9 @@
 const { ObjectId } = require('mongodb');
 
-var MongoClient = require('mongodb').MongoClient; 
-var url = 'mongodb://localhost:27017/'; 
-var dbName = 'manga_web'; 
-var Mangas = []; 
+var MongoClient = require('mongodb').MongoClient;
+var url = 'mongodb://localhost:27017/';
+var dbName = 'manga_web';
+var Mangas = [];
 // var ObjectId = require('mongodb').ObjectID;
 
 // MongoClient.connect(url, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, database) {
@@ -25,30 +25,31 @@ var Mangas = [];
 //     })
 // }); 
 
-var fs = require('fs'); 
+var fs = require('fs');
 
 MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, database) {
     var dbo = database.db(dbName);
     var arr = [];
-    fs.readdir('./public/images/Chapters/MementosMission/Chap1', 'utf-8', (err, files) => {
+    fs.readdir('./public/images/Chapters/SwordArtOnline/Chap1', 'utf-8', (err, files) => {
         if (err) {
             console.log(err);
             return;
-        }
-        else {
+        } else {
             for (var file of files) {
                 arr.push(file)
             }
             // console.log(arr); 
         }
-        var temp = []; 
+        var temp = [];
         for (var i = 0; i < arr.length; i++) {
-            temp[i] = 'images/Chapters/MementosMission/Chap1/' + arr[i]; 
+            temp[i] = 'images/Chapters/SwordArtOnline/Chap1/' + arr[i];
         }
-        dbo.collection('manga').update({name: 'Persona 5: Mementos Mission'}, {$push: {
-            chapter: {$each: temp}
-        }})
+        dbo.collection('manga').update({ name: 'Sword Art Online' }, {
+            $push: {
+                chapter: { $each: temp }
+            }
+        })
     })
 })
 
-// module.exports = Mangas; 
+// module.exports = Mangas;
