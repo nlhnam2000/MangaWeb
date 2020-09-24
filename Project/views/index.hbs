@@ -12,11 +12,6 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <script>
-        let myForm = document.getElementById('form_signin');
-        let formData = new FormData(myForm);
-        console.log(formData);
-    </script>
     <title>{{title}}</title>
 </head>
 <body class="bg-light">
@@ -286,93 +281,6 @@
         </div>
     </div>
     <main>
-        {{!-- <div class="container-fluid news-bar" id="news">
-            <table class="news">
-                <tr>
-                    <th colspan="4">Tin tức</th>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 22/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 22,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 15/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 15,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 08/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 08,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 01/07/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 01,th7, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><span class="fa fa-square"></span></p>
-                    </td>
-                    <td class="update">
-                        <a href="#">
-                            <p>Cập nhật truyện hàng tuần - 27/06/2020</p>
-                        </a>
-                    </td>
-                    <td class="clock-date">
-                        <p><span class="fa fa-clock-o"></span> 27,th6, 2020</p>
-                    </td>
-                    <td class="user">
-                        <p><span class="far fa-user"></span> Admin</p>
-                    </td>
-                </tr>
-            </table>
-        </div> --}}
         <div class="container-fluid" id="update">
             <section class="content">
                 <p class="manga-header">
@@ -667,10 +575,10 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form action="/api/auth/signin" method="post" class="form-container" id="form_signin">
+                <form action="/signin" method="post" class="form-container">
                     <div>
                         <label for="email" style="width: 100%;"><b>Email</b></label>
-                        <input type="email" name="email-signin-input" id="email" placeholder="Nhập email..." required style="width: 100%;">
+                        <input type="email" name="email" id="email" placeholder="Nhập email..." required style="width: 100%;">
                     </div>
                     <br>
                     <div>
@@ -682,16 +590,12 @@
                         <label for="password" style="width: 100%;"><b>Mật khẩu</b></label>
                         <input style="width: 100%;" type="password" name="password" id="password" placeholder="Nhập mật khẩu..." required>
                     </div>
-                    <input type="submit" value="Submit">
+                    <div class="modal-footer">
+                        <input type="submit" value="Đăng nhập" class="btn btn-success">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                    </div>
                 </form>
             </div>
-
-            <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
-              <button type="button" class="btn btn-success">Đăng nhập</button>
-            </div>
-
           </div>
         </div>
       </div>
@@ -707,7 +611,7 @@
 
             <!-- Modal body -->
             <div class="modal-body">
-                <form action="/api/auth/signup" method="post" class="form-container">
+                <form action="/signup" method="post" class="form-container">
                     <div>
                         <label for="email" style="width: 100%;"><b>Email</b></label>
                         <input type="email" name="email" id="email" placeholder="Nhập email..." required style="width: 100%;">
@@ -727,16 +631,16 @@
                         <label style="width: 100%;" for="password"><b>Xác minh mật khẩu</b></label>
                         <input style="width: 100%;" type="password" name="password" id="password" placeholder="Nhập lại mật khẩu..." required>
                     </div>
-                    <input type="submit" value="Submit">
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success" value="Đăng ký"></input>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
+                    </div>
+
                 </form>
             </div>
 
             <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
-              <button type="button" class="btn btn-success">Đăng ký</button>
-            </div>
-
+            
           </div>
         </div>
       </div>

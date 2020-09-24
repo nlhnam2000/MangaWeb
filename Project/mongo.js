@@ -30,7 +30,7 @@ var fs = require('fs');
 MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, function(err, database) {
     var dbo = database.db(dbName);
     var arr = [];
-    fs.readdir('./public/images/Chapters/Inuyasha/Chap1', 'utf-8', (err, files) => {
+    fs.readdir('./public/images/Chapters/SwordArtOnline/Chap1', 'utf-8', (err, files) => {
         if (err) {
             console.log(err);
             return;
@@ -42,11 +42,15 @@ MongoClient.connect(url, { useNewUrlParser: true, useUnifiedTopology: true }, fu
         }
         var temp = [];
         for (var i = 0; i < arr.length; i++) {
-            temp[i] = 'images/Chapters/Inuyasha/Chap1/' + arr[i];
+            temp[i] = 'images/Chapters/SwordArtOnline/Chap1/' + arr[i]; 
         }
-        dbo.collection('manga').update({ name: 'Inuyasha' }, {
-            $push: {
-                chapter: { $each: temp }
+        dbo.collection('manga').update({name: 'Sword Art Online'}, {$push: {
+            chapter: {$each: temp}
+        }}, (err, result) => {
+            if (err) throw err;
+            else {
+                console.log('successfully added'); 
+                return;
             }
         })
     })
