@@ -748,14 +748,14 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 
 /* chat bot */ 
 .chatbot-section {
-    position: sticky;
-    top: 0;
-    /* margin-right: 20px;
-    margin-bottom: 20px; */
+    right: 20px;
+    bottom: 25px;
+    position: fixed;
     z-index: 9999;
-    /* background-color: white; */
-    padding: 5px;
-    border-radius: 100%;
+    display: inline-flexbox;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3em;
+    border: solid 1px #204051;
 }
 
 .chatbot-section:hover {
@@ -763,8 +763,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
 }
 
 .chatbot-section img {
-    width: 80px;
-    height: 80px;
+    width: 75px;
+    height: 70px;
 }
 
 .chatbox {
@@ -774,6 +774,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     overflow-y: scroll;
     width: 350px;
     box-sizing: border-box;
+    margin: 0em 5em 0em 0em;
+    border-radius: 1em;
 }
 
 #chatting {

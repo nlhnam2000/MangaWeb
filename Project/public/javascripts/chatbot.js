@@ -14,57 +14,29 @@ inputField.addEventListener("keydown", function (e) {
 });
 
 const trigger = [
-  ["chan"],
-  //0 
   ["hi", "hey", "hello"],
-  //1
   ["how are you", "how are things"],
-  //2
-  ["what is going on", "what is up"],
-  //3
   ["happy", "good", "well", "fantastic", "cool", "fine"],
-  //4
   ["bad", "bored", "tired", "sad"],
-  //5
-  ["tell me story", "tell me joke"],
-  //6
   ["thanks", "thank you"],
-  //7
-  ["bye", "good bye", "goodbye"],
-  //8
-  
+  ["bye", "good bye", "goodbye"],  
 ];
   
 const reply = [
-  ["Hi Chan~"],
-  //0 
   ["Hello!", "Hi!", "Hey!", "Hi there!"], 
-  //1
   [
       "Fine... how are you?",
       "Pretty well, how are you?",
       "Fantastic, how are you?"
     ],
-  //2
-  [
-      "Nothing much",
-      "Exciting things!"
-    ],
-  //3
   ["Glad to hear it"],
-  //4
-  ["Why?", "Cheer up buddy"],
-  //5
-  ["What about?", "Once upon a time..."],
-  //6
+  ["Why?", "Cheer up~"],
   ["You're welcome", "No problem"],
-  //7
   ["Goodbye", "See you later"],
-  //8
 ];
 
 const robot = [
-  "How do you do, fellow human",
+  "Er, you call me?",
   "I am not a robot",
   "You are a robot, not me（￣へ￣）"
 ];
@@ -88,20 +60,37 @@ const hot = [
   "Sword Art Online"
 ];
 const newest = [
-  "One Piece",
-  "Naruto Shippuden",
+  "Haikyuu",
+  "Death Note",
   "Tokyo Ghoul",
-  "Doraemon",
-  "Kimetsu No Yaiba",
-  "Sword Art Online"
+  "Black Clover",
+  "Detective Conan",
+  "Attack On Titan",
+  "Sousei No Onmyouji",
+  "Boku No Hero Academia",
+  "Masumune-Kun No Revenge"
 ];
-const update = [
-  "One Piece - chapter 999",
-  "Naruto Shippuden - chapter 999",
-  "Tokyo Ghoul - chapter 999",
-  "Doraemon - chapter 999",
-  "Kimetsu No Yaiba - chapter 999",
-  "Sword Art Online - chapter 999"
+
+const comment = [
+  "I think you should read ",
+  "How about ",
+  "You might like ",
+];
+const suggest = [
+  "Haikyuu",
+  "Doraemon",
+  "One Piece",
+  "Death Note",
+  "Tokyo Ghoul",
+  "Black Clover",
+  "Detective Conan",
+  "Attack On Titan",
+  "Sword Art Online",
+  "Kimetsu No Yaiba",
+  "Naruto Shippuden",
+  "Sousei No Onmyouji",
+  "Boku No Hero Academia",
+  "Masumune-Kun No Revenge"
 ];
 
 function compare(triggerArray, replyArray, text) {
@@ -129,8 +118,8 @@ function output(input) {
     product = "One of the hottest: " + hot[Math.floor(Math.random() * hot.length)];
   } else if (text.match(/new/gi)) {
     product = "One of the newest: " + newest[Math.floor(Math.random() * newest.length)];
-  } else if (text.match(/update/gi)) {
-    product = "Updated: " + newest[Math.floor(Math.random() * update.length)];
+  } else if (text.match(/suggest/gi) || text.match(/manga/gi)) {
+    product = comment[Math.floor(Math.random() * comment.length)] + suggest[Math.floor(Math.random() * suggest.length)];
   } else {
     product = miss[Math.floor(Math.random() * miss.length)];
   }
