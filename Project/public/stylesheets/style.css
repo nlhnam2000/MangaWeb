@@ -820,8 +820,8 @@ a.share-btn, a.share-btn, .user-action .dropdown-menu li a {
     border: 1px solid none;
     border-radius: 1em;
     padding: 3px 12px 3px 12px;
-    /* word-wrap: break-word; */
-    /* float: left; */
+    word-wrap: break-word; 
+    float: left;
 }
 .user-response {
     background-color: burlywood;
